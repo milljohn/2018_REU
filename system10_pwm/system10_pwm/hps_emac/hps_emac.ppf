@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pinplan
+ variation_name="hps_emac_interface_splitter_0"
+ megafunction_name="ALTERA_HPS_EMAC_INTERFACE_SPLITTER"
+ intended_family="Cyclone V"
+ specifies="all_ports">
+ <global>
+  <pin name="phy_txclk_o" direction="input" scope="external" />
+  <pin name="clk_tx_i" direction="output" scope="external" />
+  <pin name="clk_rx_i" direction="output" scope="external" />
+  <pin name="rst_tx_n_o" direction="input" scope="external" />
+  <pin name="rst_rx_n_o" direction="input" scope="external" />
+  <pin name="mac_tx_clk_i" direction="input" scope="external" />
+  <pin name="mac_rx_clk" direction="input" scope="external" />
+  <pin name="mac_rxdv" direction="input" scope="external" />
+  <pin name="mac_rxer" direction="input" scope="external" />
+  <pin name="mac_rxd[7..0]" direction="input" scope="external" />
+  <pin name="mac_col" direction="input" scope="external" />
+  <pin name="mac_crs" direction="input" scope="external" />
+  <pin name="mac_tx_clk_o" direction="output" scope="external" />
+  <pin name="mac_rst_tx_n" direction="output" scope="external" />
+  <pin name="mac_rst_rx_n" direction="output" scope="external" />
+  <pin name="mac_txd[7..0]" direction="output" scope="external" />
+  <pin name="mac_txen" direction="output" scope="external" />
+  <pin name="mac_txer" direction="output" scope="external" />
+  <pin name="mac_speed[1..0]" direction="output" scope="external" />
+  <pin name="mdi_in" direction="input" scope="external" />
+  <pin name="mdo_out" direction="output" scope="external" />
+  <pin name="mdo_out_en" direction="output" scope="external" />
+  <pin name="clk" direction="input" scope="external" />
+  <pin name="rst_n" direction="input" scope="external" />
+  <pin name="read" direction="input" scope="external" />
+  <pin name="write" direction="input" scope="external" />
+  <pin name="writedata[31..0]" direction="input" scope="external" />
+  <pin name="readdata[31..0]" direction="output" scope="external" />
+  <pin name="addr" direction="input" scope="external" />
+  <pin name="phy_txd_o[7..0]" direction="input" scope="external" />
+  <pin name="phy_txen_o" direction="input" scope="external" />
+  <pin name="phy_txer_o" direction="input" scope="external" />
+  <pin name="mdo_o" direction="input" scope="external" />
+  <pin name="mdo_o_e" direction="input" scope="external" />
+  <pin name="ptp_pps_o" direction="input" scope="external" />
+  <pin name="phy_rxdv_i" direction="output" scope="external" />
+  <pin name="phy_rxer_i" direction="output" scope="external" />
+  <pin name="phy_rxd_i[7..0]" direction="output" scope="external" />
+  <pin name="phy_col_i" direction="output" scope="external" />
+  <pin name="phy_crs_i" direction="output" scope="external" />
+  <pin name="mdi_i" direction="output" scope="external" />
+  <pin name="ptp_aux_ts_trig_i" direction="output" scope="external" />
+  <pin name="ptp_aux_ts_trig_in" direction="input" scope="external" />
+  <pin name="ptp_pps_out" direction="output" scope="external" />
+ </global>
+</pinplan>

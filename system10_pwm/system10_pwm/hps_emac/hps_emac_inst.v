@@ -1,0 +1,47 @@
+	hps_emac u0 (
+		.phy_txclk_o        (<connected-to-phy_txclk_o>),        //   emac_gtx_clk.clk
+		.clk_tx_i           (<connected-to-clk_tx_i>),           // emac_tx_clk_in.clk
+		.clk_rx_i           (<connected-to-clk_rx_i>),           // emac_rx_clk_in.clk
+		.rst_tx_n_o         (<connected-to-rst_tx_n_o>),         //  emac_tx_reset.reset_n
+		.rst_rx_n_o         (<connected-to-rst_rx_n_o>),         //  emac_rx_reset.reset_n
+		.mac_tx_clk_i       (<connected-to-mac_tx_clk_i>),       //       hps_gmii.phy_tx_clk_i
+		.mac_rx_clk         (<connected-to-mac_rx_clk>),         //               .phy_rx_clk_i
+		.mac_rxdv           (<connected-to-mac_rxdv>),           //               .phy_rxdv_i
+		.mac_rxer           (<connected-to-mac_rxer>),           //               .phy_rxer_i
+		.mac_rxd            (<connected-to-mac_rxd>),            //               .phy_rxd_i
+		.mac_col            (<connected-to-mac_col>),            //               .phy_col_i
+		.mac_crs            (<connected-to-mac_crs>),            //               .phy_crs_i
+		.mac_tx_clk_o       (<connected-to-mac_tx_clk_o>),       //               .phy_tx_clk_o
+		.mac_rst_tx_n       (<connected-to-mac_rst_tx_n>),       //               .rst_tx_n
+		.mac_rst_rx_n       (<connected-to-mac_rst_rx_n>),       //               .rst_rx_n
+		.mac_txd            (<connected-to-mac_txd>),            //               .phy_txd_o
+		.mac_txen           (<connected-to-mac_txen>),           //               .phy_txen_o
+		.mac_txer           (<connected-to-mac_txer>),           //               .phy_txer_o
+		.mac_speed          (<connected-to-mac_speed>),          //               .phy_mac_speed_o
+		.mdi_in             (<connected-to-mdi_in>),             //           mdio.gmii_mdi_i
+		.mdo_out            (<connected-to-mdo_out>),            //               .gmii_mdo_o
+		.mdo_out_en         (<connected-to-mdo_out_en>),         //               .gmii_mdo_o_e
+		.clk                (<connected-to-clk>),                //     peri_clock.clk
+		.rst_n              (<connected-to-rst_n>),              //     peri_reset.reset_n
+		.read               (<connected-to-read>),               //   avalon_slave.read
+		.write              (<connected-to-write>),              //               .write
+		.writedata          (<connected-to-writedata>),          //               .writedata
+		.readdata           (<connected-to-readdata>),           //               .readdata
+		.addr               (<connected-to-addr>),               //               .address
+		.phy_txd_o          (<connected-to-phy_txd_o>),          //           emac.phy_txd_o
+		.phy_txen_o         (<connected-to-phy_txen_o>),         //               .phy_txen_o
+		.phy_txer_o         (<connected-to-phy_txer_o>),         //               .phy_txer_o
+		.mdo_o              (<connected-to-mdo_o>),              //               .gmii_mdo_o
+		.mdo_o_e            (<connected-to-mdo_o_e>),            //               .gmii_mdo_o_e
+		.ptp_pps_o          (<connected-to-ptp_pps_o>),          //               .ptp_pps_o
+		.phy_rxdv_i         (<connected-to-phy_rxdv_i>),         //               .phy_rxdv_i
+		.phy_rxer_i         (<connected-to-phy_rxer_i>),         //               .phy_rxer_i
+		.phy_rxd_i          (<connected-to-phy_rxd_i>),          //               .phy_rxd_i
+		.phy_col_i          (<connected-to-phy_col_i>),          //               .phy_col_i
+		.phy_crs_i          (<connected-to-phy_crs_i>),          //               .phy_crs_i
+		.mdi_i              (<connected-to-mdi_i>),              //               .gmii_mdi_i
+		.ptp_aux_ts_trig_i  (<connected-to-ptp_aux_ts_trig_i>),  //               .ptp_aux_ts_trig_i
+		.ptp_aux_ts_trig_in (<connected-to-ptp_aux_ts_trig_in>), //            ptp.ptp_aux_ts_trig_i
+		.ptp_pps_out        (<connected-to-ptp_pps_out>)         //               .ptp_pps_o
+	);
+

@@ -1,0 +1,90 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/milljohn/Downloads/DE10-Nano_v.1.3.2_HWrevC_SystemCD/Tools/SystemBuilder/CodeGenerated/DE10_NANO/PWM_DE10/simulation/qsim
+vpwm_phase_control
+Z1 !s110 1530045375
+!i10b 1
+!s100 TJc292E:5oNNE?ACFkmBh2
+I`;WnGDEBB@kYC?RLEhULW2
+Z2 V`JN@9S9cnhjKRR_L]QIcM3
+R0
+w1530045373
+8PWM_DE10.vo
+FPWM_DE10.vo
+L0 32
+Z3 OV;L;10.3d;59
+r1
+!s85 0
+31
+!s108 1530045374.988000
+!s107 PWM_DE10.vo|
+!s90 -work|work|PWM_DE10.vo|
+!i113 1
+Z4 o-work work
+vpwm_phase_control_vlg_check_tst
+R1
+!i10b 1
+!s100 IMc8anb0oAiPXZz^OU;>R2
+IOXM2mLAGCKckZb5_10g@c2
+R2
+R0
+Z5 w1530045371
+Z6 8Waveform5.vwf.vt
+Z7 FWaveform5.vwf.vt
+L0 64
+R3
+r1
+!s85 0
+31
+Z8 !s108 1530045375.089000
+Z9 !s107 Waveform5.vwf.vt|
+Z10 !s90 -work|work|Waveform5.vwf.vt|
+!i113 1
+R4
+vpwm_phase_control_vlg_sample_tst
+R1
+!i10b 1
+!s100 4zbCS:Hk_9_0PQmR[`LN42
+I@K_b=IoN:AGT0::=1?kG93
+R2
+R0
+R5
+R6
+R7
+L0 30
+R3
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R4
+vpwm_phase_control_vlg_vec_tst
+R1
+!i10b 1
+!s100 Q07iF0jH>9je`>CPREdHF0
+I@5RiS:cRl0A?ZHHDNXCL30
+R2
+R0
+R5
+R6
+R7
+L0 716
+R3
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R4

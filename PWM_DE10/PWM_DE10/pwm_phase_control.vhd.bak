@@ -1,0 +1,44 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+USE ieee.std_logic_unsigned.all;
+use ieee.numeric_std;
+
+entity pwm_phase_control is
+	--generic (max_val : integer);
+	port (
+		button_up     : in std_logic;
+		button_down   : in std_logic;
+		reset         : in std_logic;
+		max_val       : in integer;
+		
+		pwm_phase     : out integer
+	);
+	
+end entity;
+
+architecture rtl of pwm_phase_control is
+
+	--signal max   : integer range 0 to max_val;
+	shared variable count : integer;
+	begin
+		process(button_up, button_down, reset)
+			begin
+				if reset = '1' then
+					count := 0;
+				end if;
+				
+				if (button_up = '1' and count <= max_val) then
+					if count = max_val then
+						count := max_val;
+					end if;
+					count := count + 1;
+				end if;
+				
+				if (button_down = '1' and count >= max_val) then
+					count := count - 1;
+				end if;
+				
+		end process;
+		
+		pwm_phase <= count;
+end architecture;

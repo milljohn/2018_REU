@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deploy
+ date="2018.07.20.11:14:31"
+ outputDirectory="C:/myDevices/system10_pwm/hps_emac/">
+ <perimeter>
+  <parameter
+     name="AUTO_GENERATION_ID"
+     type="Integer"
+     defaultValue="0"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_UNIQUE_ID"
+     type="String"
+     defaultValue=""
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_FAMILY"
+     type="String"
+     defaultValue="Cyclone V"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE"
+     type="String"
+     defaultValue="5CSEBA6U23I7"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_SPEEDGRADE"
+     type="String"
+     defaultValue="7"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_EMAC_GTX_CLK_CLOCK_RATE"
+     type="Long"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_EMAC_GTX_CLK_CLOCK_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_EMAC_GTX_CLK_RESET_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_PERI_CLOCK_CLOCK_RATE"
+     type="Long"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_PERI_CLOCK_CLOCK_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_PERI_CLOCK_RESET_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <interface name="avalon_slave" kind="avalon" start="0">
+   <property name="addressAlignment" value="DYNAMIC" />
+   <property name="addressGroup" value="0" />
+   <property name="addressSpan" value="8" />
+   <property name="addressUnits" value="WORDS" />
+   <property name="alwaysBurstMaxBurst" value="false" />
+   <property name="associatedClock" value="peri_clock" />
+   <property name="associatedReset" value="peri_reset" />
+   <property name="bitsPerSymbol" value="8" />
+   <property name="bridgedAddressOffset" value="0" />
+   <property name="bridgesToMaster" value="" />
+   <property name="burstOnBurstBoundariesOnly" value="false" />
+   <property name="burstcountUnits" value="WORDS" />
+   <property name="constantBurstBehavior" value="false" />
+   <property name="explicitAddressSpan" value="0" />
+   <property name="holdTime" value="0" />
+   <property name="interleaveBursts" value="false" />
+   <property name="isBigEndian" value="false" />
+   <property name="isFlash" value="false" />
+   <property name="isMemoryDevice" value="false" />
+   <property name="isNonVolatileStorage" value="false" />
+   <property name="linewrapBursts" value="false" />
+   <property name="maximumPendingReadTransactions" value="0" />
+   <property name="maximumPendingWriteTransactions" value="0" />
+   <property name="minimumUninterruptedRunLength" value="1" />
+   <property name="printableDevice" value="false" />
+   <property name="readLatency" value="1" />
+   <property name="readWaitStates" value="0" />
+   <property name="readWaitTime" value="0" />
+   <property name="registerIncomingSignals" value="false" />
+   <property name="registerOutgoingSignals" value="false" />
+   <property name="setupTime" value="0" />
+   <property name="timingUnits" value="Cycles" />
+   <property name="transparentBridge" value="false" />
+   <property name="wellBehavedWaitrequest" value="false" />
+   <property name="writeLatency" value="0" />
+   <property name="writeWaitStates" value="0" />
+   <property name="writeWaitTime" value="0" />
+   <port name="read" direction="input" role="read" width="1" />
+   <port name="write" direction="input" role="write" width="1" />
+   <port name="writedata" direction="input" role="writedata" width="32" />
+   <port name="readdata" direction="output" role="readdata" width="32" />
+   <port name="addr" direction="input" role="address" width="1" />
+  </interface>
+  <interface name="emac" kind="conduit" start="0">
+   <property name="associatedClock" value="" />
+   <property name="associatedReset" value="" />
+   <port name="phy_txd_o" direction="input" role="phy_txd_o" width="8" />
+   <port name="phy_txen_o" direction="input" role="phy_txen_o" width="1" />
+   <port name="phy_txer_o" direction="input" role="phy_txer_o" width="1" />
+   <port name="mdo_o" direction="input" role="gmii_mdo_o" width="1" />
+   <port name="mdo_o_e" direction="input" role="gmii_mdo_o_e" width="1" />
+   <port name="ptp_pps_o" direction="input" role="ptp_pps_o" width="1" />
+   <port name="phy_rxdv_i" direction="output" role="phy_rxdv_i" width="1" />
+   <port name="phy_rxer_i" direction="output" role="phy_rxer_i" width="1" />
+   <port name="phy_rxd_i" direction="output" role="phy_rxd_i" width="8" />
+   <port name="phy_col_i" direction="output" role="phy_col_i" width="1" />
+   <port name="phy_crs_i" direction="output" role="phy_crs_i" width="1" />
+   <port name="mdi_i" direction="output" role="gmii_mdi_i" width="1" />
+   <port
+       name="ptp_aux_ts_trig_i"
+       direction="output"
+       role="ptp_aux_ts_trig_i"
+       width="1" />
+  </interface>
+  <interface name="emac_gtx_clk" kind="clock" start="0">
+   <property name="clockRate" value="0" />
+   <property name="externallyDriven" value="false" />
+   <property name="ptfSchematicName" value="" />
+   <port name="phy_txclk_o" direction="input" role="clk" width="1" />
+  </interface>
+  <interface name="emac_rx_clk_in" kind="clock" start="1">
+   <property name="associatedDirectClock" value="" />
+   <property name="clockRate" value="0" />
+   <property name="clockRateKnown" value="false" />
+   <property name="externallyDriven" value="false" />
+   <property name="ptfSchematicName" value="" />
+   <port name="clk_rx_i" direction="output" role="clk" width="1" />
+  </interface>
+  <interface name="emac_rx_reset" kind="reset" start="0">
+   <property name="associatedClock" value="emac_rx_clk_in" />
+   <property name="synchronousEdges" value="DEASSERT" />
+   <port name="rst_rx_n_o" direction="input" role="reset_n" width="1" />
+  </interface>
+  <interface name="emac_tx_clk_in" kind="clock" start="1">
+   <property name="associatedDirectClock" value="" />
+   <property name="clockRate" value="0" />
+   <property name="clockRateKnown" value="false" />
+   <property name="externallyDriven" value="false" />
+   <property name="ptfSchematicName" value="" />
+   <port name="clk_tx_i" direction="output" role="clk" width="1" />
+  </interface>
+  <interface name="emac_tx_reset" kind="reset" start="0">
+   <property name="associatedClock" value="emac_gtx_clk" />
+   <property name="synchronousEdges" value="DEASSERT" />
+   <port name="rst_tx_n_o" direction="input" role="reset_n" width="1" />
+  </interface>
+  <interface name="hps_gmii" kind="conduit" start="0">
+   <property name="associatedClock" value="" />
+   <property name="associatedReset" value="" />
+   <port name="mac_tx_clk_i" direction="input" role="phy_tx_clk_i" width="1" />
+   <port name="mac_rx_clk" direction="input" role="phy_rx_clk_i" width="1" />
+   <port name="mac_rxdv" direction="input" role="phy_rxdv_i" width="1" />
+   <port name="mac_rxer" direction="input" role="phy_rxer_i" width="1" />
+   <port name="mac_rxd" direction="input" role="phy_rxd_i" width="8" />
+   <port name="mac_col" direction="input" role="phy_col_i" width="1" />
+   <port name="mac_crs" direction="input" role="phy_crs_i" width="1" />
+   <port name="mac_tx_clk_o" direction="output" role="phy_tx_clk_o" width="1" />
+   <port name="mac_rst_tx_n" direction="output" role="rst_tx_n" width="1" />
+   <port name="mac_rst_rx_n" direction="output" role="rst_rx_n" width="1" />
+   <port name="mac_txd" direction="output" role="phy_txd_o" width="8" />
+   <port name="mac_txen" direction="output" role="phy_txen_o" width="1" />
+   <port name="mac_txer" direction="output" role="phy_txer_o" width="1" />
+   <port name="mac_speed" direction="output" role="phy_mac_speed_o" width="2" />
+  </interface>
+  <interface name="mdio" kind="conduit" start="0">
+   <property name="associatedClock" value="" />
+   <property name="associatedReset" value="" />
+   <port name="mdi_in" direction="input" role="gmii_mdi_i" width="1" />
+   <port name="mdo_out" direction="output" role="gmii_mdo_o" width="1" />
+   <port name="mdo_out_en" direction="output" role="gmii_mdo_o_e" width="1" />
+  </interface>
+  <interface name="peri_clock" kind="clock" start="0">
+   <property name="clockRate" value="0" />
+   <property name="externallyDriven" value="false" />
+   <property name="ptfSchematicName" value="" />
+   <port name="clk" direction="input" role="clk" width="1" />
+  </interface>
+  <interface name="peri_reset" kind="reset" start="0">
+   <property name="associatedClock" value="peri_clock" />
+   <property name="synchronousEdges" value="DEASSERT" />
+   <port name="rst_n" direction="input" role="reset_n" width="1" />
+  </interface>
+  <interface name="ptp" kind="conduit" start="0">
+   <property name="associatedClock" value="" />
+   <property name="associatedReset" value="" />
+   <port
+       name="ptp_aux_ts_trig_in"
+       direction="input"
+       role="ptp_aux_ts_trig_i"
+       width="1" />
+   <port name="ptp_pps_out" direction="output" role="ptp_pps_o" width="1" />
+  </interface>
+ </perimeter>
+ <entity
+   path=""
+   parameterizationKey="hps_emac:1.0:AUTO_DEVICE=5CSEBA6U23I7,AUTO_DEVICE_FAMILY=Cyclone V,AUTO_DEVICE_SPEEDGRADE=7,AUTO_EMAC_GTX_CLK_CLOCK_DOMAIN=-1,AUTO_EMAC_GTX_CLK_CLOCK_RATE=-1,AUTO_EMAC_GTX_CLK_RESET_DOMAIN=-1,AUTO_GENERATION_ID=1532106871,AUTO_PERI_CLOCK_CLOCK_DOMAIN=-1,AUTO_PERI_CLOCK_CLOCK_RATE=-1,AUTO_PERI_CLOCK_RESET_DOMAIN=-1,AUTO_UNIQUE_ID=(altera_hps_emac_interface_splitter:17.0:DEVICE_FAMILY=Cyclone V,MAC_SPEED_CSR_ENABLE=1)"
+   instancePathKey="hps_emac"
+   kind="hps_emac"
+   version="1.0"
+   name="hps_emac">
+  <parameter name="AUTO_PERI_CLOCK_CLOCK_RATE" value="-1" />
+  <parameter name="AUTO_EMAC_GTX_CLK_CLOCK_DOMAIN" value="-1" />
+  <parameter name="AUTO_PERI_CLOCK_CLOCK_DOMAIN" value="-1" />
+  <parameter name="AUTO_GENERATION_ID" value="1532106871" />
+  <parameter name="AUTO_DEVICE" value="5CSEBA6U23I7" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone V" />
+  <parameter name="AUTO_PERI_CLOCK_RESET_DOMAIN" value="-1" />
+  <parameter name="AUTO_EMAC_GTX_CLK_CLOCK_RATE" value="-1" />
+  <parameter name="AUTO_EMAC_GTX_CLK_RESET_DOMAIN" value="-1" />
+  <parameter name="AUTO_UNIQUE_ID" value="" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="7" />
+  <generatedFiles>
+   <file
+       path="C:/myDevices/system10_pwm/hps_emac/synthesis/hps_emac.v"
+       type="VERILOG" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="C:/myDevices/system10_pwm/hps_emac/synthesis/submodules/altera_hps_emac_interface_splitter.v"
+       type="VERILOG"
+       attributes="TOP_LEVEL_FILE" />
+   <file
+       path="C:/myDevices/system10_pwm/hps_emac/synthesis/submodules/altera_hps_emac_interface_splitter_csr.v"
+       type="VERILOG"
+       attributes="" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file path="C:/myDevices/system10_pwm/hps_emac.qsys" />
+  </sourceFiles>
+  <childSourceFiles>
+   <file
+       path="C:/intelfpga_lite/17.0/ip/altera/altera_hps_emac_interface_splitter/altera_hps_emac_interface_splitter_hw.tcl" />
+  </childSourceFiles>
+  <messages>
+   <message level="Debug" culprit="hps_emac">queue size: 0 starting:hps_emac "hps_emac"</message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Debug">Transform: CustomInstructionTransform</message>
+   <message level="Debug">No custom instruction connections, skipping transform </message>
+   <message level="Debug" culprit="merlin_custom_instruction_transform"><![CDATA[After transform: <b>1</b> modules, <b>0</b> connections]]></message>
+   <message level="Debug">Transform: MMTransform</message>
+   <message level="Debug">Transform: InterruptMapperTransform</message>
+   <message level="Debug">Transform: InterruptSyncTransform</message>
+   <message level="Debug">Transform: InterruptFanoutTransform</message>
+   <message level="Debug">Transform: AvalonStreamingTransform</message>
+   <message level="Debug">Transform: ResetAdaptation</message>
+   <message level="Debug" culprit="hps_emac"><![CDATA["<b>hps_emac</b>" reuses <b>altera_hps_emac_interface_splitter</b> "<b>submodules/altera_hps_emac_interface_splitter</b>"]]></message>
+   <message level="Debug" culprit="hps_emac">queue size: 0 starting:altera_hps_emac_interface_splitter "submodules/altera_hps_emac_interface_splitter"</message>
+   <message level="Info" culprit="hps_emac_interface_splitter_0"><![CDATA["<b>hps_emac</b>" instantiated <b>altera_hps_emac_interface_splitter</b> "<b>hps_emac_interface_splitter_0</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="altera_hps_emac_interface_splitter:17.0:DEVICE_FAMILY=Cyclone V,MAC_SPEED_CSR_ENABLE=1"
+   instancePathKey="hps_emac:.:hps_emac_interface_splitter_0"
+   kind="altera_hps_emac_interface_splitter"
+   version="17.0"
+   name="altera_hps_emac_interface_splitter">
+  <parameter name="MAC_SPEED_CSR_ENABLE" value="1" />
+  <parameter name="DEVICE_FAMILY" value="Cyclone V" />
+  <generatedFiles>
+   <file
+       path="C:/myDevices/system10_pwm/hps_emac/synthesis/submodules/altera_hps_emac_interface_splitter.v"
+       type="VERILOG"
+       attributes="TOP_LEVEL_FILE" />
+   <file
+       path="C:/myDevices/system10_pwm/hps_emac/synthesis/submodules/altera_hps_emac_interface_splitter_csr.v"
+       type="VERILOG"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="C:/intelfpga_lite/17.0/ip/altera/altera_hps_emac_interface_splitter/altera_hps_emac_interface_splitter_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="hps_emac" as="hps_emac_interface_splitter_0" />
+  <messages>
+   <message level="Debug" culprit="hps_emac">queue size: 0 starting:altera_hps_emac_interface_splitter "submodules/altera_hps_emac_interface_splitter"</message>
+   <message level="Info" culprit="hps_emac_interface_splitter_0"><![CDATA["<b>hps_emac</b>" instantiated <b>altera_hps_emac_interface_splitter</b> "<b>hps_emac_interface_splitter_0</b>"]]></message>
+  </messages>
+ </entity>
+</deploy>

@@ -1,0 +1,28 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate C:\myDevices\system10_pwm\adc.qsys --block-symbol-file --output-directory=C:\myDevices\system10_pwm\adc --family="Cyclone V" --part=5CSEBA6U23I7
+Progress: Loading system10_pwm/adc.qsys
+Progress: Reading input file
+Progress: Adding adc_ltc2308_0 [adc_ltc2308 1.1]
+Progress: Parameterizing module adc_ltc2308_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate C:\myDevices\system10_pwm\adc.qsys --synthesis=VERILOG --output-directory=C:\myDevices\system10_pwm\adc\synthesis --family="Cyclone V" --part=5CSEBA6U23I7
+Progress: Loading system10_pwm/adc.qsys
+Progress: Reading input file
+Progress: Adding adc_ltc2308_0 [adc_ltc2308 1.1]
+Progress: Parameterizing module adc_ltc2308_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: adc: Generating adc "adc" for QUARTUS_SYNTH
+Info: adc_ltc2308_0: "adc" instantiated adc_ltc2308 "adc_ltc2308_0"
+Info: adc: Done "adc" with 2 modules, 4 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

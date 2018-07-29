@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system name="$${FILENAME}">
+ <component
+   name="$${FILENAME}"
+   displayName="$${FILENAME}"
+   version="1.0"
+   description=""
+   tags="INTERNAL_COMPONENT=true"
+   categories="" />
+ <parameter name="bonusData"><![CDATA[bonusData 
+{
+   element hps_emac_interface_splitter_0
+   {
+      datum _sortIndex
+      {
+         value = "0";
+         type = "int";
+      }
+   }
+}
+]]></parameter>
+ <parameter name="clockCrossingAdapter" value="HANDSHAKE" />
+ <parameter name="device" value="5CSEBA6U23I7" />
+ <parameter name="deviceFamily" value="Cyclone V" />
+ <parameter name="deviceSpeedGrade" value="7" />
+ <parameter name="fabricMode" value="QSYS" />
+ <parameter name="generateLegacySim" value="false" />
+ <parameter name="generationId" value="0" />
+ <parameter name="globalResetBus" value="false" />
+ <parameter name="hdlLanguage" value="VERILOG" />
+ <parameter name="hideFromIPCatalog" value="true" />
+ <parameter name="lockedInterfaceDefinition" value="" />
+ <parameter name="maxAdditionalLatency" value="1" />
+ <parameter name="projectName" value="" />
+ <parameter name="sopcBorderPoints" value="false" />
+ <parameter name="systemHash" value="0" />
+ <parameter name="testBenchDutName" value="" />
+ <parameter name="timeStamp" value="0" />
+ <parameter name="useTestBenchNamingPattern" value="false" />
+ <instanceScript></instanceScript>
+ <interface
+   name="avalon_slave"
+   internal="hps_emac_interface_splitter_0.avalon_slave"
+   type="avalon"
+   dir="end">
+  <port name="read" internal="read" />
+  <port name="write" internal="write" />
+  <port name="writedata" internal="writedata" />
+  <port name="readdata" internal="readdata" />
+  <port name="addr" internal="addr" />
+ </interface>
+ <interface
+   name="emac"
+   internal="hps_emac_interface_splitter_0.emac"
+   type="conduit"
+   dir="end">
+  <port name="phy_txd_o" internal="phy_txd_o" />
+  <port name="phy_txen_o" internal="phy_txen_o" />
+  <port name="phy_txer_o" internal="phy_txer_o" />
+  <port name="mdo_o" internal="mdo_o" />
+  <port name="mdo_o_e" internal="mdo_o_e" />
+  <port name="ptp_pps_o" internal="ptp_pps_o" />
+  <port name="phy_rxdv_i" internal="phy_rxdv_i" />
+  <port name="phy_rxer_i" internal="phy_rxer_i" />
+  <port name="phy_rxd_i" internal="phy_rxd_i" />
+  <port name="phy_col_i" internal="phy_col_i" />
+  <port name="phy_crs_i" internal="phy_crs_i" />
+  <port name="mdi_i" internal="mdi_i" />
+  <port name="ptp_aux_ts_trig_i" internal="ptp_aux_ts_trig_i" />
+ </interface>
+ <interface
+   name="emac_gtx_clk"
+   internal="hps_emac_interface_splitter_0.emac_gtx_clk"
+   type="clock"
+   dir="end">
+  <port name="phy_txclk_o" internal="phy_txclk_o" />
+ </interface>
+ <interface
+   name="emac_rx_clk_in"
+   internal="hps_emac_interface_splitter_0.emac_rx_clk_in"
+   type="clock"
+   dir="start">
+  <port name="clk_rx_i" internal="clk_rx_i" />
+ </interface>
+ <interface
+   name="emac_rx_reset"
+   internal="hps_emac_interface_splitter_0.emac_rx_reset"
+   type="reset"
+   dir="end">
+  <port name="rst_rx_n_o" internal="rst_rx_n_o" />
+ </interface>
+ <interface
+   name="emac_tx_clk_in"
+   internal="hps_emac_interface_splitter_0.emac_tx_clk_in"
+   type="clock"
+   dir="start">
+  <port name="clk_tx_i" internal="clk_tx_i" />
+ </interface>
+ <interface
+   name="emac_tx_reset"
+   internal="hps_emac_interface_splitter_0.emac_tx_reset"
+   type="reset"
+   dir="end">
+  <port name="rst_tx_n_o" internal="rst_tx_n_o" />
+ </interface>
+ <interface
+   name="hps_gmii"
+   internal="hps_emac_interface_splitter_0.hps_gmii"
+   type="conduit"
+   dir="end">
+  <port name="mac_tx_clk_i" internal="mac_tx_clk_i" />
+  <port name="mac_rx_clk" internal="mac_rx_clk" />
+  <port name="mac_rxdv" internal="mac_rxdv" />
+  <port name="mac_rxer" internal="mac_rxer" />
+  <port name="mac_rxd" internal="mac_rxd" />
+  <port name="mac_col" internal="mac_col" />
+  <port name="mac_crs" internal="mac_crs" />
+  <port name="mac_tx_clk_o" internal="mac_tx_clk_o" />
+  <port name="mac_rst_tx_n" internal="mac_rst_tx_n" />
+  <port name="mac_rst_rx_n" internal="mac_rst_rx_n" />
+  <port name="mac_txd" internal="mac_txd" />
+  <port name="mac_txen" internal="mac_txen" />
+  <port name="mac_txer" internal="mac_txer" />
+  <port name="mac_speed" internal="mac_speed" />
+ </interface>
+ <interface
+   name="mdio"
+   internal="hps_emac_interface_splitter_0.mdio"
+   type="conduit"
+   dir="end">
+  <port name="mdi_in" internal="mdi_in" />
+  <port name="mdo_out" internal="mdo_out" />
+  <port name="mdo_out_en" internal="mdo_out_en" />
+ </interface>
+ <interface
+   name="peri_clock"
+   internal="hps_emac_interface_splitter_0.peri_clock"
+   type="clock"
+   dir="end">
+  <port name="clk" internal="clk" />
+ </interface>
+ <interface
+   name="peri_reset"
+   internal="hps_emac_interface_splitter_0.peri_reset"
+   type="reset"
+   dir="end">
+  <port name="rst_n" internal="rst_n" />
+ </interface>
+ <interface
+   name="ptp"
+   internal="hps_emac_interface_splitter_0.ptp"
+   type="conduit"
+   dir="end">
+  <port name="ptp_aux_ts_trig_in" internal="ptp_aux_ts_trig_in" />
+  <port name="ptp_pps_out" internal="ptp_pps_out" />
+ </interface>
+ <module
+   name="hps_emac_interface_splitter_0"
+   kind="altera_hps_emac_interface_splitter"
+   version="17.0"
+   enabled="1"
+   autoexport="1">
+  <parameter name="DEVICE_FAMILY" value="Cyclone V" />
+ </module>
+ <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
+ <interconnectRequirement for="$system" name="qsys_mm.enableEccProtection" value="FALSE" />
+ <interconnectRequirement for="$system" name="qsys_mm.insertDefaultSlave" value="FALSE" />
+ <interconnectRequirement for="$system" name="qsys_mm.maxAdditionalLatency" value="1" />
+</system>

@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deploy
+ date="2018.07.20.11:18:39"
+ outputDirectory="C:/myDevices/system10_pwm/adc/">
+ <perimeter>
+  <parameter
+     name="AUTO_GENERATION_ID"
+     type="Integer"
+     defaultValue="0"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_UNIQUE_ID"
+     type="String"
+     defaultValue=""
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_FAMILY"
+     type="String"
+     defaultValue="Cyclone V"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE"
+     type="String"
+     defaultValue="5CSEBA6U23I7"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_SPEEDGRADE"
+     type="String"
+     defaultValue="7"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLOCK_SINK_CLOCK_RATE"
+     type="Long"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLOCK_SINK_CLOCK_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLOCK_SINK_RESET_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLOCK_SINK_ADC_CLOCK_RATE"
+     type="Long"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLOCK_SINK_ADC_CLOCK_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLOCK_SINK_ADC_RESET_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <interface name="clock_sink" kind="clock" start="0">
+   <property name="clockRate" value="0" />
+   <property name="externallyDriven" value="false" />
+   <property name="ptfSchematicName" value="" />
+   <port name="slave_clk" direction="input" role="clk" width="1" />
+  </interface>
+  <interface name="clock_sink_adc" kind="clock" start="0">
+   <property name="clockRate" value="0" />
+   <property name="externallyDriven" value="false" />
+   <property name="ptfSchematicName" value="" />
+   <port name="adc_clk" direction="input" role="clk" width="1" />
+  </interface>
+  <interface name="conduit_end" kind="conduit" start="0">
+   <property name="associatedClock" value="" />
+   <property name="associatedReset" value="" />
+   <port name="ADC_CONVST" direction="output" role="CONVST" width="1" />
+   <port name="ADC_SCK" direction="output" role="SCK" width="1" />
+   <port name="ADC_SDI" direction="output" role="SDI" width="1" />
+   <port name="ADC_SDO" direction="input" role="SDO" width="1" />
+  </interface>
+  <interface name="reset_sink" kind="reset" start="0">
+   <property name="associatedClock" value="clock_sink" />
+   <property name="synchronousEdges" value="DEASSERT" />
+   <port name="slave_reset_n" direction="input" role="reset_n" width="1" />
+  </interface>
+  <interface name="slave" kind="avalon" start="0">
+   <property name="addressAlignment" value="NATIVE" />
+   <property name="addressGroup" value="0" />
+   <property name="addressSpan" value="2" />
+   <property name="addressUnits" value="WORDS" />
+   <property name="alwaysBurstMaxBurst" value="false" />
+   <property name="associatedClock" value="clock_sink" />
+   <property name="associatedReset" value="reset_sink" />
+   <property name="bitsPerSymbol" value="8" />
+   <property name="bridgedAddressOffset" value="0" />
+   <property name="bridgesToMaster" value="" />
+   <property name="burstOnBurstBoundariesOnly" value="false" />
+   <property name="burstcountUnits" value="WORDS" />
+   <property name="constantBurstBehavior" value="false" />
+   <property name="explicitAddressSpan" value="0" />
+   <property name="holdTime" value="0" />
+   <property name="interleaveBursts" value="false" />
+   <property name="isBigEndian" value="false" />
+   <property name="isFlash" value="false" />
+   <property name="isMemoryDevice" value="false" />
+   <property name="isNonVolatileStorage" value="false" />
+   <property name="linewrapBursts" value="false" />
+   <property name="maximumPendingReadTransactions" value="0" />
+   <property name="maximumPendingWriteTransactions" value="0" />
+   <property name="minimumUninterruptedRunLength" value="1" />
+   <property name="printableDevice" value="false" />
+   <property name="readLatency" value="0" />
+   <property name="readWaitStates" value="1" />
+   <property name="readWaitTime" value="1" />
+   <property name="registerIncomingSignals" value="false" />
+   <property name="registerOutgoingSignals" value="false" />
+   <property name="setupTime" value="0" />
+   <property name="timingUnits" value="Cycles" />
+   <property name="transparentBridge" value="false" />
+   <property name="wellBehavedWaitrequest" value="false" />
+   <property name="writeLatency" value="0" />
+   <property name="writeWaitStates" value="0" />
+   <property name="writeWaitTime" value="0" />
+   <port
+       name="slave_chipselect_n"
+       direction="input"
+       role="chipselect_n"
+       width="1" />
+   <port name="slave_read_n" direction="input" role="read_n" width="1" />
+   <port name="slave_readdata" direction="output" role="readdata" width="16" />
+   <port name="slave_addr" direction="input" role="address" width="1" />
+   <port name="slave_wrtie_n" direction="input" role="write_n" width="1" />
+   <port name="slave_wriredata" direction="input" role="writedata" width="16" />
+  </interface>
+ </perimeter>
+ <entity
+   path=""
+   parameterizationKey="adc:1.0:AUTO_CLOCK_SINK_ADC_CLOCK_DOMAIN=-1,AUTO_CLOCK_SINK_ADC_CLOCK_RATE=-1,AUTO_CLOCK_SINK_ADC_RESET_DOMAIN=-1,AUTO_CLOCK_SINK_CLOCK_DOMAIN=-1,AUTO_CLOCK_SINK_CLOCK_RATE=-1,AUTO_CLOCK_SINK_RESET_DOMAIN=-1,AUTO_DEVICE=5CSEBA6U23I7,AUTO_DEVICE_FAMILY=Cyclone V,AUTO_DEVICE_SPEEDGRADE=7,AUTO_GENERATION_ID=1532107118,AUTO_UNIQUE_ID=(adc_ltc2308:1.1:)"
+   instancePathKey="adc"
+   kind="adc"
+   version="1.0"
+   name="adc">
+  <parameter name="AUTO_GENERATION_ID" value="1532107118" />
+  <parameter name="AUTO_DEVICE" value="5CSEBA6U23I7" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone V" />
+  <parameter name="AUTO_CLOCK_SINK_CLOCK_DOMAIN" value="-1" />
+  <parameter name="AUTO_CLOCK_SINK_RESET_DOMAIN" value="-1" />
+  <parameter name="AUTO_UNIQUE_ID" value="" />
+  <parameter name="AUTO_CLOCK_SINK_CLOCK_RATE" value="-1" />
+  <parameter name="AUTO_CLOCK_SINK_ADC_CLOCK_RATE" value="-1" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="7" />
+  <parameter name="AUTO_CLOCK_SINK_ADC_CLOCK_DOMAIN" value="-1" />
+  <parameter name="AUTO_CLOCK_SINK_ADC_RESET_DOMAIN" value="-1" />
+  <generatedFiles>
+   <file path="C:/myDevices/system10_pwm/adc/synthesis/adc.v" type="VERILOG" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="C:/myDevices/system10_pwm/adc/synthesis/submodules/adc_ltc2308_fifo.v"
+       type="VERILOG"
+       attributes="TOP_LEVEL_FILE" />
+   <file
+       path="C:/myDevices/system10_pwm/adc/synthesis/submodules/adc_ltc2308.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/myDevices/system10_pwm/adc/synthesis/submodules/adc_data_fifo.v"
+       type="VERILOG"
+       attributes="" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file path="C:/myDevices/system10_pwm/adc.qsys" />
+  </sourceFiles>
+  <childSourceFiles>
+   <file
+       path="C:/Users/milljohn/Downloads/DE10-Nano_v.1.3.2_HWrevC_SystemCD/Demonstrations/FPGA/ADC/ip/ADC_LTC2308_FIFO/adc_ltc2308_hw.tcl" />
+  </childSourceFiles>
+  <messages>
+   <message level="Debug" culprit="adc">queue size: 0 starting:adc "adc"</message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Debug">Transform: CustomInstructionTransform</message>
+   <message level="Debug">No custom instruction connections, skipping transform </message>
+   <message level="Debug" culprit="merlin_custom_instruction_transform"><![CDATA[After transform: <b>1</b> modules, <b>0</b> connections]]></message>
+   <message level="Debug">Transform: MMTransform</message>
+   <message level="Debug">Transform: InterruptMapperTransform</message>
+   <message level="Debug">Transform: InterruptSyncTransform</message>
+   <message level="Debug">Transform: InterruptFanoutTransform</message>
+   <message level="Debug">Transform: AvalonStreamingTransform</message>
+   <message level="Debug">Transform: ResetAdaptation</message>
+   <message level="Debug" culprit="adc"><![CDATA["<b>adc</b>" reuses <b>adc_ltc2308</b> "<b>submodules/adc_ltc2308_fifo</b>"]]></message>
+   <message level="Debug" culprit="adc">queue size: 0 starting:adc_ltc2308 "submodules/adc_ltc2308_fifo"</message>
+   <message level="Info" culprit="adc_ltc2308_0"><![CDATA["<b>adc</b>" instantiated <b>adc_ltc2308</b> "<b>adc_ltc2308_0</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="adc_ltc2308:1.1:"
+   instancePathKey="adc:.:adc_ltc2308_0"
+   kind="adc_ltc2308"
+   version="1.1"
+   name="adc_ltc2308_fifo">
+  <generatedFiles>
+   <file
+       path="C:/myDevices/system10_pwm/adc/synthesis/submodules/adc_ltc2308_fifo.v"
+       type="VERILOG"
+       attributes="TOP_LEVEL_FILE" />
+   <file
+       path="C:/myDevices/system10_pwm/adc/synthesis/submodules/adc_ltc2308.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/myDevices/system10_pwm/adc/synthesis/submodules/adc_data_fifo.v"
+       type="VERILOG"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="C:/Users/milljohn/Downloads/DE10-Nano_v.1.3.2_HWrevC_SystemCD/Demonstrations/FPGA/ADC/ip/ADC_LTC2308_FIFO/adc_ltc2308_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="adc" as="adc_ltc2308_0" />
+  <messages>
+   <message level="Debug" culprit="adc">queue size: 0 starting:adc_ltc2308 "submodules/adc_ltc2308_fifo"</message>
+   <message level="Info" culprit="adc_ltc2308_0"><![CDATA["<b>adc</b>" instantiated <b>adc_ltc2308</b> "<b>adc_ltc2308_0</b>"]]></message>
+  </messages>
+ </entity>
+</deploy>

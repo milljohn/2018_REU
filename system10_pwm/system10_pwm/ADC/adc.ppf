@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pinplan
+ variation_name="adc_ltc2308_0"
+ megafunction_name="ADC_LTC2308"
+ specifies="all_ports">
+ <global>
+  <pin name="slave_chipselect_n" direction="input" scope="external" />
+  <pin name="slave_read_n" direction="input" scope="external" />
+  <pin name="slave_readdata[15..0]" direction="output" scope="external" />
+  <pin name="slave_addr" direction="input" scope="external" />
+  <pin name="slave_wrtie_n" direction="input" scope="external" />
+  <pin name="slave_wriredata[15..0]" direction="input" scope="external" />
+  <pin name="ADC_CONVST" direction="output" scope="external" />
+  <pin name="ADC_SCK" direction="output" scope="external" />
+  <pin name="ADC_SDI" direction="output" scope="external" />
+  <pin name="ADC_SDO" direction="input" scope="external" />
+  <pin name="slave_reset_n" direction="input" scope="external" />
+  <pin name="slave_clk" direction="input" scope="external" />
+  <pin name="adc_clk" direction="input" scope="external" />
+ </global>
+</pinplan>

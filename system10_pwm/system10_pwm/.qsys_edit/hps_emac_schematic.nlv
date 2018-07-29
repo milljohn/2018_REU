@@ -1,0 +1,18 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst unsaved -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst unsaved.hps_emac_interface_splitter_0 -pg 1 -lvl 1 -y 30
+preplace netloc EXPORT<net_container>unsaved</net_container>(SLAVE)unsaved.peri_reset,(SLAVE)hps_emac_interface_splitter_0.peri_reset) 1 0 1 NJ
+preplace netloc EXPORT<net_container>unsaved</net_container>(SLAVE)hps_emac_interface_splitter_0.peri_clock,(SLAVE)unsaved.peri_clock) 1 0 1 NJ
+preplace netloc EXPORT<net_container>unsaved</net_container>(SLAVE)hps_emac_interface_splitter_0.emac_tx_reset,(SLAVE)unsaved.emac_tx_reset) 1 0 1 NJ
+preplace netloc EXPORT<net_container>unsaved</net_container>(MASTER)unsaved.emac_tx_clk_in,(MASTER)hps_emac_interface_splitter_0.emac_tx_clk_in) 1 1 1 NJ
+preplace netloc EXPORT<net_container>unsaved</net_container>(SLAVE)hps_emac_interface_splitter_0.mdio,(SLAVE)unsaved.mdio) 1 0 1 NJ
+preplace netloc EXPORT<net_container>unsaved</net_container>(SLAVE)unsaved.emac_rx_reset,(SLAVE)hps_emac_interface_splitter_0.emac_rx_reset) 1 0 1 NJ
+preplace netloc EXPORT<net_container>unsaved</net_container>(SLAVE)unsaved.emac_gtx_clk,(SLAVE)hps_emac_interface_splitter_0.emac_gtx_clk) 1 0 1 NJ
+preplace netloc EXPORT<net_container>unsaved</net_container>(MASTER)hps_emac_interface_splitter_0.emac_rx_clk_in,(MASTER)unsaved.emac_rx_clk_in) 1 1 1 NJ
+preplace netloc EXPORT<net_container>unsaved</net_container>(SLAVE)hps_emac_interface_splitter_0.ptp,(SLAVE)unsaved.ptp) 1 0 1 NJ
+preplace netloc EXPORT<net_container>unsaved</net_container>(SLAVE)unsaved.hps_gmii,(SLAVE)hps_emac_interface_splitter_0.hps_gmii) 1 0 1 NJ
+preplace netloc EXPORT<net_container>unsaved</net_container>(SLAVE)unsaved.emac,(SLAVE)hps_emac_interface_splitter_0.emac) 1 0 1 NJ
+preplace netloc EXPORT<net_container>unsaved</net_container>(SLAVE)hps_emac_interface_splitter_0.avalon_slave,(SLAVE)unsaved.avalon_slave) 1 0 1 NJ
+levelinfo -pg 1 0 90 460
+levelinfo -hier unsaved 100 130 340

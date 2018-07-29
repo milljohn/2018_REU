@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deploy
+ date="2018.07.20.11:16:09"
+ outputDirectory="C:/myDevices/system10_pwm/hps_gmii/">
+ <perimeter>
+  <parameter
+     name="AUTO_GENERATION_ID"
+     type="Integer"
+     defaultValue="0"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_UNIQUE_ID"
+     type="String"
+     defaultValue=""
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_FAMILY"
+     type="String"
+     defaultValue="Cyclone V"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE"
+     type="String"
+     defaultValue="5CSEBA6U23I7"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_SPEEDGRADE"
+     type="String"
+     defaultValue="7"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_PERI_CLOCK_CLOCK_RATE"
+     type="Long"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_PERI_CLOCK_CLOCK_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_PERI_CLOCK_RESET_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_PLL_25M_CLOCK_CLOCK_RATE"
+     type="Long"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_PLL_25M_CLOCK_CLOCK_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_PLL_25M_CLOCK_RESET_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_PLL_2_5M_CLOCK_CLOCK_RATE"
+     type="Long"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_PLL_2_5M_CLOCK_CLOCK_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_PLL_2_5M_CLOCK_RESET_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <interface name="hps_gmii" kind="conduit" start="0">
+   <property name="associatedClock" value="" />
+   <property name="associatedReset" value="" />
+   <port
+       name="hps_gmii_phy_tx_clk_o"
+       direction="input"
+       role="phy_tx_clk_o"
+       width="1" />
+   <port name="hps_gmii_rst_tx_n" direction="input" role="rst_tx_n" width="1" />
+   <port name="hps_gmii_rst_rx_n" direction="input" role="rst_rx_n" width="1" />
+   <port
+       name="hps_gmii_phy_txd_o"
+       direction="input"
+       role="phy_txd_o"
+       width="8" />
+   <port
+       name="hps_gmii_phy_txen_o"
+       direction="input"
+       role="phy_txen_o"
+       width="1" />
+   <port
+       name="hps_gmii_phy_txer_o"
+       direction="input"
+       role="phy_txer_o"
+       width="1" />
+   <port
+       name="hps_gmii_phy_mac_speed_o"
+       direction="input"
+       role="phy_mac_speed_o"
+       width="2" />
+   <port
+       name="hps_gmii_phy_tx_clk_i"
+       direction="output"
+       role="phy_tx_clk_i"
+       width="1" />
+   <port
+       name="hps_gmii_phy_rx_clk_i"
+       direction="output"
+       role="phy_rx_clk_i"
+       width="1" />
+   <port
+       name="hps_gmii_phy_rxdv_i"
+       direction="output"
+       role="phy_rxdv_i"
+       width="1" />
+   <port
+       name="hps_gmii_phy_rxer_i"
+       direction="output"
+       role="phy_rxer_i"
+       width="1" />
+   <port
+       name="hps_gmii_phy_rxd_i"
+       direction="output"
+       role="phy_rxd_i"
+       width="8" />
+   <port
+       name="hps_gmii_phy_col_i"
+       direction="output"
+       role="phy_col_i"
+       width="1" />
+   <port
+       name="hps_gmii_phy_crs_i"
+       direction="output"
+       role="phy_crs_i"
+       width="1" />
+  </interface>
+  <interface name="peri_clock" kind="clock" start="0">
+   <property name="clockRate" value="0" />
+   <property name="externallyDriven" value="false" />
+   <property name="ptfSchematicName" value="" />
+   <port name="peri_clock_clk" direction="input" role="clk" width="1" />
+  </interface>
+  <interface name="peri_reset" kind="reset" start="0">
+   <property name="associatedClock" value="peri_clock" />
+   <property name="synchronousEdges" value="DEASSERT" />
+   <port name="peri_reset_reset_n" direction="input" role="reset_n" width="1" />
+  </interface>
+  <interface name="phy_rgmii" kind="conduit" start="0">
+   <property name="associatedClock" value="" />
+   <property name="associatedReset" value="" />
+   <port
+       name="phy_rgmii_rgmii_rx_clk"
+       direction="input"
+       role="rgmii_rx_clk"
+       width="1" />
+   <port
+       name="phy_rgmii_rgmii_rxd"
+       direction="input"
+       role="rgmii_rxd"
+       width="4" />
+   <port
+       name="phy_rgmii_rgmii_rx_ctl"
+       direction="input"
+       role="rgmii_rx_ctl"
+       width="1" />
+   <port
+       name="phy_rgmii_rgmii_tx_clk"
+       direction="output"
+       role="rgmii_tx_clk"
+       width="1" />
+   <port
+       name="phy_rgmii_rgmii_txd"
+       direction="output"
+       role="rgmii_txd"
+       width="4" />
+   <port
+       name="phy_rgmii_rgmii_tx_ctl"
+       direction="output"
+       role="rgmii_tx_ctl"
+       width="1" />
+  </interface>
+  <interface name="pll_25m_clock" kind="clock" start="0">
+   <property name="clockRate" value="0" />
+   <property name="externallyDriven" value="false" />
+   <property name="ptfSchematicName" value="" />
+   <port name="pll_25m_clock_clk" direction="input" role="clk" width="1" />
+  </interface>
+  <interface name="pll_2_5m_clock" kind="clock" start="0">
+   <property name="clockRate" value="0" />
+   <property name="externallyDriven" value="false" />
+   <property name="ptfSchematicName" value="" />
+   <port name="pll_2_5m_clock_clk" direction="input" role="clk" width="1" />
+  </interface>
+ </perimeter>
+ <entity
+   path=""
+   parameterizationKey="hps_gmii:1.0:AUTO_DEVICE=5CSEBA6U23I7,AUTO_DEVICE_FAMILY=Cyclone V,AUTO_DEVICE_SPEEDGRADE=7,AUTO_GENERATION_ID=1532106968,AUTO_PERI_CLOCK_CLOCK_DOMAIN=-1,AUTO_PERI_CLOCK_CLOCK_RATE=-1,AUTO_PERI_CLOCK_RESET_DOMAIN=-1,AUTO_PLL_25M_CLOCK_CLOCK_DOMAIN=-1,AUTO_PLL_25M_CLOCK_CLOCK_RATE=-1,AUTO_PLL_25M_CLOCK_RESET_DOMAIN=-1,AUTO_PLL_2_5M_CLOCK_CLOCK_DOMAIN=-1,AUTO_PLL_2_5M_CLOCK_CLOCK_RATE=-1,AUTO_PLL_2_5M_CLOCK_RESET_DOMAIN=-1,AUTO_UNIQUE_ID=(altera_gmii_to_rgmii_adapter:17.0:AUTO_DEVICE=5CSEBA6U23I7,AUTO_DEVICE_SPEEDGRADE=7,DEVICE_FAMILY=Cyclone V,RX_PIPELINE_DEPTH=2,TX_PIPELINE_DEPTH=2(altera_gmii_to_rgmii_adapter_core:17.0:DEVICE_FAMILY=Cyclone V,RX_PIPELINE_DEPTH=2,TX_PIPELINE_DEPTH=2,USE_ALTGPIO=0))"
+   instancePathKey="hps_gmii"
+   kind="hps_gmii"
+   version="1.0"
+   name="hps_gmii">
+  <parameter name="AUTO_PERI_CLOCK_CLOCK_RATE" value="-1" />
+  <parameter name="AUTO_PLL_25M_CLOCK_RESET_DOMAIN" value="-1" />
+  <parameter name="AUTO_PLL_25M_CLOCK_CLOCK_DOMAIN" value="-1" />
+  <parameter name="AUTO_GENERATION_ID" value="1532106968" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone V" />
+  <parameter name="AUTO_UNIQUE_ID" value="" />
+  <parameter name="AUTO_PLL_25M_CLOCK_CLOCK_RATE" value="-1" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="7" />
+  <parameter name="AUTO_PERI_CLOCK_CLOCK_DOMAIN" value="-1" />
+  <parameter name="AUTO_DEVICE" value="5CSEBA6U23I7" />
+  <parameter name="AUTO_PERI_CLOCK_RESET_DOMAIN" value="-1" />
+  <parameter name="AUTO_PLL_2_5M_CLOCK_CLOCK_RATE" value="-1" />
+  <parameter name="AUTO_PLL_2_5M_CLOCK_CLOCK_DOMAIN" value="-1" />
+  <parameter name="AUTO_PLL_2_5M_CLOCK_RESET_DOMAIN" value="-1" />
+  <generatedFiles>
+   <file
+       path="C:/myDevices/system10_pwm/hps_gmii/synthesis/hps_gmii.v"
+       type="VERILOG" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="C:/myDevices/system10_pwm/hps_gmii/synthesis/submodules/hps_gmii_gmii_to_rgmii_adapter_0.v"
+       type="VERILOG" />
+   <file
+       path="C:/myDevices/system10_pwm/hps_gmii/synthesis/submodules/altera_gmii_to_rgmii_adapter.v"
+       type="VERILOG"
+       attributes="TOP_LEVEL_FILE" />
+   <file
+       path="C:/myDevices/system10_pwm/hps_gmii/synthesis/submodules/altera_gtr_mac_speed_filter.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/myDevices/system10_pwm/hps_gmii/synthesis/submodules/altera_gtr_pipeline_stage.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/myDevices/system10_pwm/hps_gmii/synthesis/submodules/altera_gtr_rgmii_in1.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/myDevices/system10_pwm/hps_gmii/synthesis/submodules/altera_gtr_rgmii_in4.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/myDevices/system10_pwm/hps_gmii/synthesis/submodules/altera_gtr_rgmii_module.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/myDevices/system10_pwm/hps_gmii/synthesis/submodules/altera_gtr_nf_rgmii_module.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/myDevices/system10_pwm/hps_gmii/synthesis/submodules/altera_gtr_rgmii_out1.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/myDevices/system10_pwm/hps_gmii/synthesis/submodules/altera_gtr_rgmii_out4.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/myDevices/system10_pwm/hps_gmii/synthesis/submodules/altera_gtr_clock_mux.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/myDevices/system10_pwm/hps_gmii/synthesis/submodules/altera_gtr_clock_gate.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/myDevices/system10_pwm/hps_gmii/synthesis/submodules/altera_gtr_reset_synchronizer.v"
+       type="VERILOG"
+       attributes="" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file path="C:/myDevices/system10_pwm/hps_gmii.qsys" />
+  </sourceFiles>
+  <childSourceFiles>
+   <file
+       path="C:/intelfpga_lite/17.0/ip/altera/altera_gmii_to_rgmii_adapter/altera_gmii_to_rgmii_adapter_wrapper_hw.tcl" />
+   <file
+       path="C:/intelfpga_lite/17.0/ip/altera/altera_gmii_to_rgmii_adapter/altera_gmii_to_rgmii_adapter_hw.tcl" />
+  </childSourceFiles>
+  <messages>
+   <message level="Debug" culprit="hps_gmii">queue size: 0 starting:hps_gmii "hps_gmii"</message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Debug">Transform: CustomInstructionTransform</message>
+   <message level="Debug">No custom instruction connections, skipping transform </message>
+   <message level="Debug" culprit="merlin_custom_instruction_transform"><![CDATA[After transform: <b>1</b> modules, <b>0</b> connections]]></message>
+   <message level="Debug">Transform: MMTransform</message>
+   <message level="Debug">Transform: InterruptMapperTransform</message>
+   <message level="Debug">Transform: InterruptSyncTransform</message>
+   <message level="Debug">Transform: InterruptFanoutTransform</message>
+   <message level="Debug">Transform: AvalonStreamingTransform</message>
+   <message level="Debug">Transform: ResetAdaptation</message>
+   <message level="Debug" culprit="hps_gmii"><![CDATA["<b>hps_gmii</b>" reuses <b>altera_gmii_to_rgmii_adapter</b> "<b>submodules/hps_gmii_gmii_to_rgmii_adapter_0</b>"]]></message>
+   <message level="Debug" culprit="hps_gmii">queue size: 0 starting:altera_gmii_to_rgmii_adapter "submodules/hps_gmii_gmii_to_rgmii_adapter_0"</message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Debug">Transform: CustomInstructionTransform</message>
+   <message level="Debug">No custom instruction connections, skipping transform </message>
+   <message level="Debug" culprit="merlin_custom_instruction_transform"><![CDATA[After transform: <b>1</b> modules, <b>0</b> connections]]></message>
+   <message level="Debug">Transform: MMTransform</message>
+   <message level="Debug">Transform: InterruptMapperTransform</message>
+   <message level="Debug">Transform: InterruptSyncTransform</message>
+   <message level="Debug">Transform: InterruptFanoutTransform</message>
+   <message level="Debug">Transform: AvalonStreamingTransform</message>
+   <message level="Debug">Transform: ResetAdaptation</message>
+   <message level="Debug" culprit="gmii_to_rgmii_adapter_0"><![CDATA["<b>gmii_to_rgmii_adapter_0</b>" reuses <b>altera_gmii_to_rgmii_adapter_core</b> "<b>submodules/altera_gmii_to_rgmii_adapter</b>"]]></message>
+   <message level="Info" culprit="gmii_to_rgmii_adapter_0"><![CDATA["<b>hps_gmii</b>" instantiated <b>altera_gmii_to_rgmii_adapter</b> "<b>gmii_to_rgmii_adapter_0</b>"]]></message>
+   <message level="Debug" culprit="hps_gmii">queue size: 0 starting:altera_gmii_to_rgmii_adapter_core "submodules/altera_gmii_to_rgmii_adapter"</message>
+   <message level="Info" culprit="u_altera_gmii_to_rgmii_adapter_core"><![CDATA["<b>gmii_to_rgmii_adapter_0</b>" instantiated <b>altera_gmii_to_rgmii_adapter_core</b> "<b>u_altera_gmii_to_rgmii_adapter_core</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="altera_gmii_to_rgmii_adapter:17.0:AUTO_DEVICE=5CSEBA6U23I7,AUTO_DEVICE_SPEEDGRADE=7,DEVICE_FAMILY=Cyclone V,RX_PIPELINE_DEPTH=2,TX_PIPELINE_DEPTH=2(altera_gmii_to_rgmii_adapter_core:17.0:DEVICE_FAMILY=Cyclone V,RX_PIPELINE_DEPTH=2,TX_PIPELINE_DEPTH=2,USE_ALTGPIO=0)"
+   instancePathKey="hps_gmii:.:gmii_to_rgmii_adapter_0"
+   kind="altera_gmii_to_rgmii_adapter"
+   version="17.0"
+   name="hps_gmii_gmii_to_rgmii_adapter_0">
+  <parameter name="AUTO_DEVICE" value="5CSEBA6U23I7" />
+  <parameter name="TX_PIPELINE_DEPTH" value="2" />
+  <parameter name="DEVICE_FAMILY" value="Cyclone V" />
+  <parameter name="RX_PIPELINE_DEPTH" value="2" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="7" />
+  <generatedFiles>
+   <file
+       path="C:/myDevices/system10_pwm/hps_gmii/synthesis/submodules/hps_gmii_gmii_to_rgmii_adapter_0.v"
+       type="VERILOG" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="C:/myDevices/system10_pwm/hps_gmii/synthesis/submodules/altera_gmii_to_rgmii_adapter.v"
+       type="VERILOG"
+       attributes="TOP_LEVEL_FILE" />
+   <file
+       path="C:/myDevices/system10_pwm/hps_gmii/synthesis/submodules/altera_gtr_mac_speed_filter.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/myDevices/system10_pwm/hps_gmii/synthesis/submodules/altera_gtr_pipeline_stage.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/myDevices/system10_pwm/hps_gmii/synthesis/submodules/altera_gtr_rgmii_in1.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/myDevices/system10_pwm/hps_gmii/synthesis/submodules/altera_gtr_rgmii_in4.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/myDevices/system10_pwm/hps_gmii/synthesis/submodules/altera_gtr_rgmii_module.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/myDevices/system10_pwm/hps_gmii/synthesis/submodules/altera_gtr_nf_rgmii_module.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/myDevices/system10_pwm/hps_gmii/synthesis/submodules/altera_gtr_rgmii_out1.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/myDevices/system10_pwm/hps_gmii/synthesis/submodules/altera_gtr_rgmii_out4.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/myDevices/system10_pwm/hps_gmii/synthesis/submodules/altera_gtr_clock_mux.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/myDevices/system10_pwm/hps_gmii/synthesis/submodules/altera_gtr_clock_gate.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/myDevices/system10_pwm/hps_gmii/synthesis/submodules/altera_gtr_reset_synchronizer.v"
+       type="VERILOG"
+       attributes="" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file
+       path="C:/intelfpga_lite/17.0/ip/altera/altera_gmii_to_rgmii_adapter/altera_gmii_to_rgmii_adapter_wrapper_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles>
+   <file
+       path="C:/intelfpga_lite/17.0/ip/altera/altera_gmii_to_rgmii_adapter/altera_gmii_to_rgmii_adapter_hw.tcl" />
+  </childSourceFiles>
+  <instantiator instantiator="hps_gmii" as="gmii_to_rgmii_adapter_0" />
+  <messages>
+   <message level="Debug" culprit="hps_gmii">queue size: 0 starting:altera_gmii_to_rgmii_adapter "submodules/hps_gmii_gmii_to_rgmii_adapter_0"</message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Debug">Transform: CustomInstructionTransform</message>
+   <message level="Debug">No custom instruction connections, skipping transform </message>
+   <message level="Debug" culprit="merlin_custom_instruction_transform"><![CDATA[After transform: <b>1</b> modules, <b>0</b> connections]]></message>
+   <message level="Debug">Transform: MMTransform</message>
+   <message level="Debug">Transform: InterruptMapperTransform</message>
+   <message level="Debug">Transform: InterruptSyncTransform</message>
+   <message level="Debug">Transform: InterruptFanoutTransform</message>
+   <message level="Debug">Transform: AvalonStreamingTransform</message>
+   <message level="Debug">Transform: ResetAdaptation</message>
+   <message level="Debug" culprit="gmii_to_rgmii_adapter_0"><![CDATA["<b>gmii_to_rgmii_adapter_0</b>" reuses <b>altera_gmii_to_rgmii_adapter_core</b> "<b>submodules/altera_gmii_to_rgmii_adapter</b>"]]></message>
+   <message level="Info" culprit="gmii_to_rgmii_adapter_0"><![CDATA["<b>hps_gmii</b>" instantiated <b>altera_gmii_to_rgmii_adapter</b> "<b>gmii_to_rgmii_adapter_0</b>"]]></message>
+   <message level="Debug" culprit="hps_gmii">queue size: 0 starting:altera_gmii_to_rgmii_adapter_core "submodules/altera_gmii_to_rgmii_adapter"</message>
+   <message level="Info" culprit="u_altera_gmii_to_rgmii_adapter_core"><![CDATA["<b>gmii_to_rgmii_adapter_0</b>" instantiated <b>altera_gmii_to_rgmii_adapter_core</b> "<b>u_altera_gmii_to_rgmii_adapter_core</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="altera_gmii_to_rgmii_adapter_core:17.0:DEVICE_FAMILY=Cyclone V,RX_PIPELINE_DEPTH=2,TX_PIPELINE_DEPTH=2,USE_ALTGPIO=0"
+   instancePathKey="hps_gmii:.:gmii_to_rgmii_adapter_0:.:u_altera_gmii_to_rgmii_adapter_core"
+   kind="altera_gmii_to_rgmii_adapter_core"
+   version="17.0"
+   name="altera_gmii_to_rgmii_adapter">
+  <parameter name="TX_PIPELINE_DEPTH" value="2" />
+  <parameter name="USE_ALTGPIO" value="0" />
+  <parameter name="DEVICE_FAMILY" value="Cyclone V" />
+  <parameter name="RX_PIPELINE_DEPTH" value="2" />
+  <generatedFiles>
+   <file
+       path="C:/myDevices/system10_pwm/hps_gmii/synthesis/submodules/altera_gmii_to_rgmii_adapter.v"
+       type="VERILOG"
+       attributes="TOP_LEVEL_FILE" />
+   <file
+       path="C:/myDevices/system10_pwm/hps_gmii/synthesis/submodules/altera_gtr_mac_speed_filter.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/myDevices/system10_pwm/hps_gmii/synthesis/submodules/altera_gtr_pipeline_stage.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/myDevices/system10_pwm/hps_gmii/synthesis/submodules/altera_gtr_rgmii_in1.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/myDevices/system10_pwm/hps_gmii/synthesis/submodules/altera_gtr_rgmii_in4.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/myDevices/system10_pwm/hps_gmii/synthesis/submodules/altera_gtr_rgmii_module.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/myDevices/system10_pwm/hps_gmii/synthesis/submodules/altera_gtr_nf_rgmii_module.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/myDevices/system10_pwm/hps_gmii/synthesis/submodules/altera_gtr_rgmii_out1.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/myDevices/system10_pwm/hps_gmii/synthesis/submodules/altera_gtr_rgmii_out4.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/myDevices/system10_pwm/hps_gmii/synthesis/submodules/altera_gtr_clock_mux.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/myDevices/system10_pwm/hps_gmii/synthesis/submodules/altera_gtr_clock_gate.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/myDevices/system10_pwm/hps_gmii/synthesis/submodules/altera_gtr_reset_synchronizer.v"
+       type="VERILOG"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="C:/intelfpga_lite/17.0/ip/altera/altera_gmii_to_rgmii_adapter/altera_gmii_to_rgmii_adapter_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator
+     instantiator="hps_gmii_gmii_to_rgmii_adapter_0"
+     as="u_altera_gmii_to_rgmii_adapter_core" />
+  <messages>
+   <message level="Debug" culprit="hps_gmii">queue size: 0 starting:altera_gmii_to_rgmii_adapter_core "submodules/altera_gmii_to_rgmii_adapter"</message>
+   <message level="Info" culprit="u_altera_gmii_to_rgmii_adapter_core"><![CDATA["<b>gmii_to_rgmii_adapter_0</b>" instantiated <b>altera_gmii_to_rgmii_adapter_core</b> "<b>u_altera_gmii_to_rgmii_adapter_core</b>"]]></message>
+  </messages>
+ </entity>
+</deploy>

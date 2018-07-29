@@ -1,0 +1,6 @@
+	component adc is
+		port (
+			clk_clk : in std_logic := 'X'  -- clk
+		);
+	end component adc;
+

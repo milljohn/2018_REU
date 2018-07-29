@@ -1,0 +1,18 @@
+	component adc is
+		port (
+			slave_clk          : in  std_logic                     := 'X';             -- clk
+			adc_clk            : in  std_logic                     := 'X';             -- clk
+			ADC_CONVST         : out std_logic;                                        -- CONVST
+			ADC_SCK            : out std_logic;                                        -- SCK
+			ADC_SDI            : out std_logic;                                        -- SDI
+			ADC_SDO            : in  std_logic                     := 'X';             -- SDO
+			slave_reset_n      : in  std_logic                     := 'X';             -- reset_n
+			slave_chipselect_n : in  std_logic                     := 'X';             -- chipselect_n
+			slave_read_n       : in  std_logic                     := 'X';             -- read_n
+			slave_readdata     : out std_logic_vector(15 downto 0);                    -- readdata
+			slave_addr         : in  std_logic                     := 'X';             -- address
+			slave_wrtie_n      : in  std_logic                     := 'X';             -- write_n
+			slave_wriredata    : in  std_logic_vector(15 downto 0) := (others => 'X')  -- writedata
+		);
+	end component adc;
+

@@ -1,0 +1,28 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate C:\myDevices\system10_pwm\hps_emac.qsys --block-symbol-file --output-directory=C:\myDevices\system10_pwm\hps_emac --family="Cyclone V" --part=5CSEBA6U23I7
+Progress: Loading system10_pwm/hps_emac.qsys
+Progress: Reading input file
+Progress: Adding hps_emac_interface_splitter_0 [altera_hps_emac_interface_splitter 17.0]
+Progress: Parameterizing module hps_emac_interface_splitter_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate C:\myDevices\system10_pwm\hps_emac.qsys --synthesis=VERILOG --output-directory=C:\myDevices\system10_pwm\hps_emac\synthesis --family="Cyclone V" --part=5CSEBA6U23I7
+Progress: Loading system10_pwm/hps_emac.qsys
+Progress: Reading input file
+Progress: Adding hps_emac_interface_splitter_0 [altera_hps_emac_interface_splitter 17.0]
+Progress: Parameterizing module hps_emac_interface_splitter_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: hps_emac: Generating hps_emac "hps_emac" for QUARTUS_SYNTH
+Info: hps_emac_interface_splitter_0: "hps_emac" instantiated altera_hps_emac_interface_splitter "hps_emac_interface_splitter_0"
+Info: hps_emac: Done "hps_emac" with 2 modules, 3 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

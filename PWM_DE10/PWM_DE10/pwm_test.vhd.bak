@@ -1,0 +1,121 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+USE ieee.std_logic_unsigned.all;
+use ieee.numeric_std;
+
+LIBRARY altera;
+USE altera.altera_primitives_components.all; 
+
+
+
+entity pwm_test is
+	generic (
+		clk_ticks           : integer      :=1000  --
+		--phase_shft		     : integer		  := 250   --
+	);
+	port (
+
+			FPGA_CLK1_50 : in std_logic;
+			FPGA_CLK2_50 : in std_logic;
+			FPGA_CLK3_50 : in std_logic;
+		  
+		  LED	  : buffer std_logic_vector(7 downto 0);
+		  
+
+		  
+		  KEY	     : in std_logic_vector(3 downto 0);
+		  SW		  : in std_LOGIC_VECTOR(9 downto 0);
+		  
+		  GPIO_0   : buffer std_logic_vector(35 downto 0);
+		  GPIO_1   : buffer std_logic_vector(35 downto 0)
+	);
+		  
+
+end pwm_test;
+
+architecture rtl of pwm_test is
+-- ===============================================================================================================
+	--signal clk_ticks  : integer := 1000;
+	--variable clk_ticks  : integer := 1000;
+	--shared variable phase_shft : integer range 0 to clk_ticks;-- := 250;
+	signal rst          : std_logic;
+	signal up_level     : std_logic;
+	signal up_tick      : std_logic;
+	signal down_level   : std_logic;
+	signal down_tick    : std_logic;
+	signal phased       : std_LOGIC_VECTOR (10 downto 0);
+	--variable p1 : integer;
+	signal phase_shft   : integer :=250;
+--================================================================================================================
+--================================================================================================================	 
+	begin
+
+
+	
+	
+	
+	pwm_double_1	: entity work.pwm_double(rtl)
+		generic map( clock_ticks   => clk_ticks
+						)
+		port map(
+			clk        => FPGA_CLK1_50 ,
+			
+			pwm_out_1      => GPIO_1(33),
+			pwm_out_1_bar  => GPIO_0(32),
+			
+			phase_2    => phase_shft,
+			pwm_out_2      => GPIO_1(35),
+			pwm_out_2_bar  => GPIO_0(34)
+		);
+	
+	
+	count_up : entity work.debounce(exp_fsmd_arch)
+		port map(
+			clk        => FPGA_CLK1_50 ,
+			reset      => rst,
+			sw         => key(0),
+			db_level   => up_tick, 
+			db_tick    => up_level
+		);
+
+	count_down : entity work.debounce(exp_fsmd_arch)
+		port map(
+			clk        => FPGA_CLK1_50 ,
+			reset      => rst,
+			sw         => key(1),
+			db_level   => down_tick, 
+			db_tick    => down_level
+		);	
+
+phase_control : entity work.pwm_phase_control (rtl)
+
+		port map (
+			button_up   => up_tick,
+			button_down => down_tick,
+			reset       => rst,
+			max_val     => clk_ticks,
+			pwm_phase   => phase_shft
+		);
+		--phase_shft := phase_shft;
+end architecture;
+
+
+--Duty Cycle	Value
+--10%				25
+--15%				38
+--20%				50
+--25%				63
+--30%				75
+--35%				88
+--40%				100
+--45%				113
+--50%				125
+--55%				138
+--60%				150
+--65%				163
+--70%				175
+--75%				188
+--80%				200
+--85%				213
+--90%				225
+--95%				238

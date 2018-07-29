@@ -1,0 +1,13 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst unsaved.gmii_to_rgmii_adapter_0 -pg 1 -lvl 1 -y 50
+preplace inst unsaved.gmii_to_rgmii_adapter_0.u_altera_gmii_to_rgmii_adapter_core -pg 1
+preplace inst unsaved -pg 1 -lvl 1 -y 40 -regy -20
+preplace netloc EXPORT<net_container>unsaved</net_container>(SLAVE)gmii_to_rgmii_adapter_0.pll_2_5m_clock,(SLAVE)unsaved.pll_2_5m_clock) 1 0 1 NJ
+preplace netloc EXPORT<net_container>unsaved</net_container>(SLAVE)gmii_to_rgmii_adapter_0.phy_rgmii,(SLAVE)unsaved.phy_rgmii) 1 0 1 NJ
+preplace netloc EXPORT<net_container>unsaved</net_container>(SLAVE)unsaved.pll_25m_clock,(SLAVE)gmii_to_rgmii_adapter_0.pll_25m_clock) 1 0 1 NJ
+preplace netloc EXPORT<net_container>unsaved</net_container>(SLAVE)unsaved.peri_clock,(SLAVE)gmii_to_rgmii_adapter_0.peri_clock) 1 0 1 NJ
+preplace netloc EXPORT<net_container>unsaved</net_container>(SLAVE)unsaved.hps_gmii,(SLAVE)gmii_to_rgmii_adapter_0.hps_gmii) 1 0 1 NJ
+preplace netloc EXPORT<net_container>unsaved</net_container>(SLAVE)unsaved.peri_reset,(SLAVE)gmii_to_rgmii_adapter_0.peri_reset) 1 0 1 NJ
+levelinfo -pg 1 0 100 360
+levelinfo -hier unsaved 110 220 350

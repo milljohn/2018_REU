@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system name="$${FILENAME}">
+ <component
+   name="$${FILENAME}"
+   displayName="$${FILENAME}"
+   version="1.0"
+   description=""
+   tags="INTERNAL_COMPONENT=true"
+   categories="" />
+ <parameter name="bonusData"><![CDATA[bonusData 
+{
+   element adc_ltc2308_0
+   {
+      datum _sortIndex
+      {
+         value = "0";
+         type = "int";
+      }
+   }
+}
+]]></parameter>
+ <parameter name="clockCrossingAdapter" value="HANDSHAKE" />
+ <parameter name="device" value="5CSEBA6U23I7" />
+ <parameter name="deviceFamily" value="Cyclone V" />
+ <parameter name="deviceSpeedGrade" value="7" />
+ <parameter name="fabricMode" value="QSYS" />
+ <parameter name="generateLegacySim" value="false" />
+ <parameter name="generationId" value="0" />
+ <parameter name="globalResetBus" value="false" />
+ <parameter name="hdlLanguage" value="VERILOG" />
+ <parameter name="hideFromIPCatalog" value="true" />
+ <parameter name="lockedInterfaceDefinition" value="" />
+ <parameter name="maxAdditionalLatency" value="1" />
+ <parameter name="projectName" value="" />
+ <parameter name="sopcBorderPoints" value="false" />
+ <parameter name="systemHash" value="0" />
+ <parameter name="testBenchDutName" value="" />
+ <parameter name="timeStamp" value="0" />
+ <parameter name="useTestBenchNamingPattern" value="false" />
+ <instanceScript></instanceScript>
+ <interface
+   name="clock_sink"
+   internal="adc_ltc2308_0.clock_sink"
+   type="clock"
+   dir="end">
+  <port name="slave_clk" internal="slave_clk" />
+ </interface>
+ <interface
+   name="clock_sink_adc"
+   internal="adc_ltc2308_0.clock_sink_adc"
+   type="clock"
+   dir="end">
+  <port name="adc_clk" internal="adc_clk" />
+ </interface>
+ <interface
+   name="conduit_end"
+   internal="adc_ltc2308_0.conduit_end"
+   type="conduit"
+   dir="end">
+  <port name="ADC_CONVST" internal="ADC_CONVST" />
+  <port name="ADC_SCK" internal="ADC_SCK" />
+  <port name="ADC_SDI" internal="ADC_SDI" />
+  <port name="ADC_SDO" internal="ADC_SDO" />
+ </interface>
+ <interface
+   name="reset_sink"
+   internal="adc_ltc2308_0.reset_sink"
+   type="reset"
+   dir="end">
+  <port name="slave_reset_n" internal="slave_reset_n" />
+ </interface>
+ <interface name="slave" internal="adc_ltc2308_0.slave" type="avalon" dir="end">
+  <port name="slave_chipselect_n" internal="slave_chipselect_n" />
+  <port name="slave_read_n" internal="slave_read_n" />
+  <port name="slave_readdata" internal="slave_readdata" />
+  <port name="slave_addr" internal="slave_addr" />
+  <port name="slave_wrtie_n" internal="slave_wrtie_n" />
+  <port name="slave_wriredata" internal="slave_wriredata" />
+ </interface>
+ <module
+   name="adc_ltc2308_0"
+   kind="adc_ltc2308"
+   version="1.1"
+   enabled="1"
+   autoexport="1" />
+ <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
+ <interconnectRequirement for="$system" name="qsys_mm.enableEccProtection" value="FALSE" />
+ <interconnectRequirement for="$system" name="qsys_mm.insertDefaultSlave" value="FALSE" />
+ <interconnectRequirement for="$system" name="qsys_mm.maxAdditionalLatency" value="1" />
+</system>

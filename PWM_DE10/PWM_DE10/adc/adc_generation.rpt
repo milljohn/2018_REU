@@ -1,0 +1,217 @@
+Info: Starting: Create simulation model
+Info: qsys-generate C:\Users\milljohn\Downloads\DE10-Nano_v.1.3.2_HWrevC_SystemCD\Tools\SystemBuilder\CodeGenerated\DE10_NANO\PWM_DE10\adc.qsys --simulation=VHDL --output-directory=C:\Users\milljohn\Downloads\DE10-Nano_v.1.3.2_HWrevC_SystemCD\Tools\SystemBuilder\CodeGenerated\DE10_NANO\PWM_DE10\adc\simulation --family="Cyclone V" --part=5CSEBA6U23I7
+Progress: Loading PWM_DE10/adc.qsys
+Progress: Reading input file
+Progress: Adding ADC [altera_up_avalon_de1_soc_adc 15.0]
+Progress: Parameterizing module ADC
+Progress: Adding LEDs [altera_avalon_pio 15.0]
+Progress: Parameterizing module LEDs
+Progress: Adding clk_0 [clock_source 15.0]
+Progress: Parameterizing module clk_0
+Progress: Adding cpu [altera_nios2_qsys 15.0]
+Progress: Parameterizing module cpu
+Progress: Adding onchip_mem [altera_avalon_onchip_memory2 15.0]
+Progress: Parameterizing module onchip_mem
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: adc.cpu: Nios II Classic cores are now superseded by improved Gen 2 cores.
+Warning: adc.ADC: ADC.external_interface must be exported, or connected to a matching conduit.
+Warning: adc.LEDs: LEDs.external_connection must be exported, or connected to a matching conduit.
+Info: adc: Generating adc "adc" for SIM_VHDL
+Info: ADC: Starting Generation of DE1-SoC ADC Controller
+Info: ADC: C:/altera/ip/altera/university_program/input_output/altera_up_avalon_de1_soc_adc/hdl/altera_up_avalon_de1_soc_adv_adc.v C:/Users/milljohn/AppData/Local/Temp/alt7709_8956128958839523358.dir/0001_sopcgen/adc_ADC.v
+Warning: ADC: No files generated for fileset SIM_VHDL
+Info: ADC: "adc" instantiated altera_up_avalon_de1_soc_adc "ADC"
+Info: LEDs: Starting RTL generation for module 'adc_LEDs'
+Info: LEDs:   Generation command is [exec C:/altera/quartus/bin64/perl/bin/perl.exe -I C:/altera/quartus/bin64/perl/lib -I C:/altera/quartus/sopc_builder/bin/europa -I C:/altera/quartus/sopc_builder/bin/perl_lib -I C:/altera/quartus/sopc_builder/bin -I C:/altera/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/altera/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=adc_LEDs --dir=C:/Users/milljohn/AppData/Local/Temp/alt7709_8956128958839523358.dir/0004_LEDs_gen/ --quartus_dir=C:/altera/quartus --vhdl --config=C:/Users/milljohn/AppData/Local/Temp/alt7709_8956128958839523358.dir/0004_LEDs_gen//adc_LEDs_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/milljohn/AppData/Local/Temp/alt7709_8956128958839523358.dir/0004_LEDs_gen/  ]
+Info: LEDs: Done RTL generation for module 'adc_LEDs'
+Info: LEDs: "adc" instantiated altera_avalon_pio "LEDs"
+Info: cpu: Starting RTL generation for module 'adc_cpu'
+Info: cpu:   Generation command is [exec C:/altera/quartus/bin64/eperlcmd.exe -I C:/altera/quartus/bin64/perl/lib -I C:/altera/quartus/sopc_builder/bin/europa -I C:/altera/quartus/sopc_builder/bin/perl_lib -I C:/altera/quartus/sopc_builder/bin -I C:/altera/quartus/../ip/altera/nios2_ip/altera_nios2/cpu_lib -I C:/altera/quartus/../ip/altera/nios2_ip/altera_nios2/nios_lib -I C:/altera/quartus/../ip/altera/nios2_ip/altera_nios2 -I C:/altera/quartus/../ip/altera/nios2_ip/altera_nios2 -- C:/altera/quartus/../ip/altera/nios2_ip/altera_nios2/generate_rtl.epl --name=adc_cpu --dir=C:/Users/milljohn/AppData/Local/Temp/alt7709_8956128958839523358.dir/0005_cpu_gen/ --quartus_bindir=C:/altera/quartus/bin64 --vhdl --config=C:/Users/milljohn/AppData/Local/Temp/alt7709_8956128958839523358.dir/0005_cpu_gen//adc_cpu_processor_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/milljohn/AppData/Local/Temp/alt7709_8956128958839523358.dir/0005_cpu_gen/  ]
+Info: cpu: # 2018.06.27 12:48:23 (*) Starting Nios II generation
+Info: cpu: # 2018.06.27 12:48:23 (*)   Checking for plaintext license.
+Info: cpu: # 2018.06.27 12:48:25 (*)   Plaintext license not found.
+Info: cpu: # 2018.06.27 12:48:25 (*)   Checking for encrypted license (non-evaluation).
+Info: cpu: # 2018.06.27 12:48:26 (*)   Encrypted license found.  SOF will not be time-limited.
+Info: cpu: # 2018.06.27 12:48:26 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2018.06.27 12:48:26 (*)   Creating all objects for CPU
+Info: cpu: # 2018.06.27 12:48:26 (*)     Testbench
+Info: cpu: # 2018.06.27 12:48:26 (*)     Instruction decoding
+Info: cpu: # 2018.06.27 12:48:26 (*)       Instruction fields
+Info: cpu: # 2018.06.27 12:48:26 (*)       Instruction decodes
+Info: cpu: # 2018.06.27 12:48:27 (*)       Signals for RTL simulation waveforms
+Info: cpu: # 2018.06.27 12:48:27 (*)       Instruction controls
+Info: cpu: # 2018.06.27 12:48:27 (*)     Pipeline frontend
+Info: cpu: # 2018.06.27 12:48:27 (*)     Pipeline backend
+Info: cpu: # 2018.06.27 12:48:29 (*)   Creating 'C:/Users/milljohn/AppData/Local/Temp/alt7709_8956128958839523358.dir/0005_cpu_gen//adc_cpu_nios2_waves.do'
+Info: cpu: # 2018.06.27 12:48:29 (*)   Generating RTL from CPU objects
+Info: cpu: # 2018.06.27 12:48:34 (*)   Creating encrypted RTL
+Info: cpu: # 2018.06.27 12:48:35 (*)   Creating IP functional simulation model
+Info: cpu: # 2018.06.27 12:48:54 (*) Done Nios II generation
+Info: cpu: Done RTL generation for module 'adc_cpu'
+Info: cpu: "adc" instantiated altera_nios2_qsys "cpu"
+Info: onchip_mem: Starting RTL generation for module 'adc_onchip_mem'
+Info: onchip_mem:   Generation command is [exec C:/altera/quartus/bin64/perl/bin/perl.exe -I C:/altera/quartus/bin64/perl/lib -I C:/altera/quartus/sopc_builder/bin/europa -I C:/altera/quartus/sopc_builder/bin/perl_lib -I C:/altera/quartus/sopc_builder/bin -I C:/altera/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/altera/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=adc_onchip_mem --dir=C:/Users/milljohn/AppData/Local/Temp/alt7709_8956128958839523358.dir/0006_onchip_mem_gen/ --quartus_dir=C:/altera/quartus --vhdl --config=C:/Users/milljohn/AppData/Local/Temp/alt7709_8956128958839523358.dir/0006_onchip_mem_gen//adc_onchip_mem_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/milljohn/AppData/Local/Temp/alt7709_8956128958839523358.dir/0006_onchip_mem_gen/  ]
+Info: onchip_mem: Done RTL generation for module 'adc_onchip_mem'
+Info: onchip_mem: "adc" instantiated altera_avalon_onchip_memory2 "onchip_mem"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_0: "adc" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: irq_mapper: Generating VHDL simulation model
+Info: irq_mapper: Generated simulation model adc_irq_mapper.vho
+Info: irq_mapper: "adc" instantiated altera_irq_mapper "irq_mapper"
+Info: rst_controller: "adc" instantiated altera_reset_controller "rst_controller"
+Info: cpu_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "cpu_data_master_translator"
+Info: ADC_adc_slave_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "ADC_adc_slave_translator"
+Info: cpu_data_master_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "cpu_data_master_agent"
+Info: ADC_adc_slave_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "ADC_adc_slave_agent"
+Info: ADC_adc_slave_agent_rsp_fifo: Generating VHDL simulation model
+Info: ADC_adc_slave_agent_rsp_fifo: Generated simulation model adc_mm_interconnect_0_ADC_adc_slave_agent_rsp_fifo.vho
+Info: ADC_adc_slave_agent_rsp_fifo: "mm_interconnect_0" instantiated altera_avalon_sc_fifo "ADC_adc_slave_agent_rsp_fifo"
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_002: "mm_interconnect_0" instantiated altera_merlin_router "router_002"
+Info: cpu_data_master_limiter: "mm_interconnect_0" instantiated altera_merlin_traffic_limiter "cpu_data_master_limiter"
+Info: cmd_demux: Generating VHDL simulation model
+Info: cmd_demux: Generated simulation model adc_mm_interconnect_0_cmd_demux.vho
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_mux: Generating VHDL simulation model
+Info: cmd_mux: Generated simulation model adc_mm_interconnect_0_cmd_mux.vho
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: rsp_demux: Generating VHDL simulation model
+Info: rsp_demux: Generated simulation model adc_mm_interconnect_0_rsp_demux.vho
+Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_mux: Generating VHDL simulation model
+Info: rsp_mux: Generated simulation model adc_mm_interconnect_0_rsp_mux.vho
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: adc: Done "adc" with 22 modules, 68 files
+Info: ip-generate succeeded.
+Info: Finished: Create simulation model
+Info: Starting: Create Modelsim Project.
+Info: sim-script-gen --spd=C:\Users\milljohn\Downloads\DE10-Nano_v.1.3.2_HWrevC_SystemCD\Tools\SystemBuilder\CodeGenerated\DE10_NANO\PWM_DE10\adc\adc.spd --output-directory=C:/Users/milljohn/Downloads/DE10-Nano_v.1.3.2_HWrevC_SystemCD/Tools/SystemBuilder/CodeGenerated/DE10_NANO/PWM_DE10/adc/simulation/ --use-relative-paths=true
+Info: Doing: ip-make-simscript --spd=C:\Users\milljohn\Downloads\DE10-Nano_v.1.3.2_HWrevC_SystemCD\Tools\SystemBuilder\CodeGenerated\DE10_NANO\PWM_DE10\adc\adc.spd --output-directory=C:/Users/milljohn/Downloads/DE10-Nano_v.1.3.2_HWrevC_SystemCD/Tools/SystemBuilder/CodeGenerated/DE10_NANO/PWM_DE10/adc/simulation/ --use-relative-paths=true
+Info: Generating the following file(s) for MODELSIM simulator in C:/Users/milljohn/Downloads/DE10-Nano_v.1.3.2_HWrevC_SystemCD/Tools/SystemBuilder/CodeGenerated/DE10_NANO/PWM_DE10/adc/simulation/ directory:
+Info: 	mentor/msim_setup.tcl
+Info: Skipping VCS script generation since VHDL file $QUARTUS_INSTALL_DIR/eda/sim_lib/altera_syn_attributes.vhd is required for simulation
+Info: Generating the following file(s) for VCSMX simulator in C:/Users/milljohn/Downloads/DE10-Nano_v.1.3.2_HWrevC_SystemCD/Tools/SystemBuilder/CodeGenerated/DE10_NANO/PWM_DE10/adc/simulation/ directory:
+Info: 	synopsys/vcsmx/synopsys_sim.setup
+Info: 	synopsys/vcsmx/vcsmx_setup.sh
+Info: Generating the following file(s) for NCSIM simulator in C:/Users/milljohn/Downloads/DE10-Nano_v.1.3.2_HWrevC_SystemCD/Tools/SystemBuilder/CodeGenerated/DE10_NANO/PWM_DE10/adc/simulation/ directory:
+Info: 	cadence/cds.lib
+Info: 	cadence/hdl.var
+Info: 	cadence/ncsim_setup.sh
+Info: 	14 .cds.lib files in cadence/cds_libs/ directory
+Info: Generating the following file(s) for RIVIERA simulator in C:/Users/milljohn/Downloads/DE10-Nano_v.1.3.2_HWrevC_SystemCD/Tools/SystemBuilder/CodeGenerated/DE10_NANO/PWM_DE10/adc/simulation/ directory:
+Info: 	aldec/rivierapro_setup.tcl
+Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under C:/Users/milljohn/Downloads/DE10-Nano_v.1.3.2_HWrevC_SystemCD/Tools/SystemBuilder/CodeGenerated/DE10_NANO/PWM_DE10/adc/simulation/.
+Info: Finished: Create Modelsim Project.
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate C:\Users\milljohn\Downloads\DE10-Nano_v.1.3.2_HWrevC_SystemCD\Tools\SystemBuilder\CodeGenerated\DE10_NANO\PWM_DE10\adc.qsys --block-symbol-file --output-directory=C:\Users\milljohn\Downloads\DE10-Nano_v.1.3.2_HWrevC_SystemCD\Tools\SystemBuilder\CodeGenerated\DE10_NANO\PWM_DE10\adc --family="Cyclone V" --part=5CSEBA6U23I7
+Progress: Loading PWM_DE10/adc.qsys
+Progress: Reading input file
+Progress: Adding ADC [altera_up_avalon_de1_soc_adc 15.0]
+Progress: Parameterizing module ADC
+Progress: Adding LEDs [altera_avalon_pio 15.0]
+Progress: Parameterizing module LEDs
+Progress: Adding clk_0 [clock_source 15.0]
+Progress: Parameterizing module clk_0
+Progress: Adding cpu [altera_nios2_qsys 15.0]
+Progress: Parameterizing module cpu
+Progress: Adding onchip_mem [altera_avalon_onchip_memory2 15.0]
+Progress: Parameterizing module onchip_mem
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: adc.cpu: Nios II Classic cores are now superseded by improved Gen 2 cores.
+Warning: adc.ADC: ADC.external_interface must be exported, or connected to a matching conduit.
+Warning: adc.LEDs: LEDs.external_connection must be exported, or connected to a matching conduit.
+Info: ip-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate C:\Users\milljohn\Downloads\DE10-Nano_v.1.3.2_HWrevC_SystemCD\Tools\SystemBuilder\CodeGenerated\DE10_NANO\PWM_DE10\adc.qsys --synthesis=VERILOG --output-directory=C:\Users\milljohn\Downloads\DE10-Nano_v.1.3.2_HWrevC_SystemCD\Tools\SystemBuilder\CodeGenerated\DE10_NANO\PWM_DE10\adc\synthesis --family="Cyclone V" --part=5CSEBA6U23I7
+Progress: Loading PWM_DE10/adc.qsys
+Progress: Reading input file
+Progress: Adding ADC [altera_up_avalon_de1_soc_adc 15.0]
+Progress: Parameterizing module ADC
+Progress: Adding LEDs [altera_avalon_pio 15.0]
+Progress: Parameterizing module LEDs
+Progress: Adding clk_0 [clock_source 15.0]
+Progress: Parameterizing module clk_0
+Progress: Adding cpu [altera_nios2_qsys 15.0]
+Progress: Parameterizing module cpu
+Progress: Adding onchip_mem [altera_avalon_onchip_memory2 15.0]
+Progress: Parameterizing module onchip_mem
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: adc.cpu: Nios II Classic cores are now superseded by improved Gen 2 cores.
+Warning: adc.ADC: ADC.external_interface must be exported, or connected to a matching conduit.
+Warning: adc.LEDs: LEDs.external_connection must be exported, or connected to a matching conduit.
+Info: adc: Generating adc "adc" for QUARTUS_SYNTH
+Info: ADC: Starting Generation of DE1-SoC ADC Controller
+Info: ADC: C:/altera/ip/altera/university_program/input_output/altera_up_avalon_de1_soc_adc/hdl/altera_up_avalon_de1_soc_adv_adc.v C:/Users/milljohn/AppData/Local/Temp/alt7709_8956128958839523358.dir/0041_sopcgen/adc_ADC.v
+Info: ADC: "adc" instantiated altera_up_avalon_de1_soc_adc "ADC"
+Info: LEDs: Starting RTL generation for module 'adc_LEDs'
+Info: LEDs:   Generation command is [exec C:/altera/quartus/bin64/perl/bin/perl.exe -I C:/altera/quartus/bin64/perl/lib -I C:/altera/quartus/sopc_builder/bin/europa -I C:/altera/quartus/sopc_builder/bin/perl_lib -I C:/altera/quartus/sopc_builder/bin -I C:/altera/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/altera/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=adc_LEDs --dir=C:/Users/milljohn/AppData/Local/Temp/alt7709_8956128958839523358.dir/0044_LEDs_gen/ --quartus_dir=C:/altera/quartus --verilog --config=C:/Users/milljohn/AppData/Local/Temp/alt7709_8956128958839523358.dir/0044_LEDs_gen//adc_LEDs_component_configuration.pl  --do_build_sim=0  ]
+Info: LEDs: Done RTL generation for module 'adc_LEDs'
+Info: LEDs: "adc" instantiated altera_avalon_pio "LEDs"
+Info: cpu: Starting RTL generation for module 'adc_cpu'
+Info: cpu:   Generation command is [exec C:/altera/quartus/bin64/eperlcmd.exe -I C:/altera/quartus/bin64/perl/lib -I C:/altera/quartus/sopc_builder/bin/europa -I C:/altera/quartus/sopc_builder/bin/perl_lib -I C:/altera/quartus/sopc_builder/bin -I C:/altera/quartus/../ip/altera/nios2_ip/altera_nios2/cpu_lib -I C:/altera/quartus/../ip/altera/nios2_ip/altera_nios2/nios_lib -I C:/altera/quartus/../ip/altera/nios2_ip/altera_nios2 -I C:/altera/quartus/../ip/altera/nios2_ip/altera_nios2 -- C:/altera/quartus/../ip/altera/nios2_ip/altera_nios2/generate_rtl.epl --name=adc_cpu --dir=C:/Users/milljohn/AppData/Local/Temp/alt7709_8956128958839523358.dir/0045_cpu_gen/ --quartus_bindir=C:/altera/quartus/bin64 --verilog --config=C:/Users/milljohn/AppData/Local/Temp/alt7709_8956128958839523358.dir/0045_cpu_gen//adc_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info: cpu: # 2018.06.27 12:50:37 (*) Starting Nios II generation
+Info: cpu: # 2018.06.27 12:50:37 (*)   Checking for plaintext license.
+Info: cpu: # 2018.06.27 12:50:39 (*)   Plaintext license not found.
+Info: cpu: # 2018.06.27 12:50:39 (*)   Checking for encrypted license (non-evaluation).
+Info: cpu: # 2018.06.27 12:50:40 (*)   Encrypted license found.  SOF will not be time-limited.
+Info: cpu: # 2018.06.27 12:50:40 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2018.06.27 12:50:40 (*)   Creating all objects for CPU
+Info: cpu: # 2018.06.27 12:50:40 (*)     Testbench
+Info: cpu: # 2018.06.27 12:50:40 (*)     Instruction decoding
+Info: cpu: # 2018.06.27 12:50:40 (*)       Instruction fields
+Info: cpu: # 2018.06.27 12:50:40 (*)       Instruction decodes
+Info: cpu: # 2018.06.27 12:50:41 (*)       Signals for RTL simulation waveforms
+Info: cpu: # 2018.06.27 12:50:41 (*)       Instruction controls
+Info: cpu: # 2018.06.27 12:50:41 (*)     Pipeline frontend
+Info: cpu: # 2018.06.27 12:50:41 (*)     Pipeline backend
+Info: cpu: # 2018.06.27 12:50:43 (*)   Generating RTL from CPU objects
+Info: cpu: # 2018.06.27 12:50:45 (*)   Creating encrypted RTL
+Info: cpu: # 2018.06.27 12:50:46 (*) Done Nios II generation
+Info: cpu: Done RTL generation for module 'adc_cpu'
+Info: cpu: "adc" instantiated altera_nios2_qsys "cpu"
+Info: onchip_mem: Starting RTL generation for module 'adc_onchip_mem'
+Info: onchip_mem:   Generation command is [exec C:/altera/quartus/bin64/perl/bin/perl.exe -I C:/altera/quartus/bin64/perl/lib -I C:/altera/quartus/sopc_builder/bin/europa -I C:/altera/quartus/sopc_builder/bin/perl_lib -I C:/altera/quartus/sopc_builder/bin -I C:/altera/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/altera/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=adc_onchip_mem --dir=C:/Users/milljohn/AppData/Local/Temp/alt7709_8956128958839523358.dir/0046_onchip_mem_gen/ --quartus_dir=C:/altera/quartus --verilog --config=C:/Users/milljohn/AppData/Local/Temp/alt7709_8956128958839523358.dir/0046_onchip_mem_gen//adc_onchip_mem_component_configuration.pl  --do_build_sim=0  ]
+Info: onchip_mem: Done RTL generation for module 'adc_onchip_mem'
+Info: onchip_mem: "adc" instantiated altera_avalon_onchip_memory2 "onchip_mem"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_0: "adc" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: irq_mapper: "adc" instantiated altera_irq_mapper "irq_mapper"
+Info: rst_controller: "adc" instantiated altera_reset_controller "rst_controller"
+Info: cpu_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "cpu_data_master_translator"
+Info: ADC_adc_slave_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "ADC_adc_slave_translator"
+Info: cpu_data_master_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "cpu_data_master_agent"
+Info: ADC_adc_slave_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "ADC_adc_slave_agent"
+Info: ADC_adc_slave_agent_rsp_fifo: "mm_interconnect_0" instantiated altera_avalon_sc_fifo "ADC_adc_slave_agent_rsp_fifo"
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_002: "mm_interconnect_0" instantiated altera_merlin_router "router_002"
+Info: cpu_data_master_limiter: "mm_interconnect_0" instantiated altera_merlin_traffic_limiter "cpu_data_master_limiter"
+Info: Reusing file C:/Users/milljohn/Downloads/DE10-Nano_v.1.3.2_HWrevC_SystemCD/Tools/SystemBuilder/CodeGenerated/DE10_NANO/PWM_DE10/adc/synthesis/submodules/altera_avalon_sc_fifo.v
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file C:/Users/milljohn/Downloads/DE10-Nano_v.1.3.2_HWrevC_SystemCD/Tools/SystemBuilder/CodeGenerated/DE10_NANO/PWM_DE10/adc/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: adc: Done "adc" with 22 modules, 44 files
+Info: ip-generate succeeded.
+Info: Finished: Create HDL design files for synthesis
