@@ -1,6 +1,6 @@
 Controller for Distributed Power Processing in Battery Packs
 John Miller
-milljohnster (at) gmail.com
+milljohnster (at) gmail.com 
 2018 ReU (Research Undergrad) New Mexico State University
 Sources are commented in the code
 
